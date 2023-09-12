@@ -21,17 +21,16 @@ module.exports = ({ env }) => ({
     config: {
       provider: "nodemailer",
       providerOptions: {
-        host: env("SMTP_HOST", "mail.grupo7.cl"),
-        port: env("SMTP_PORT", 465),
+        host: env("SMTP_HOST"),
+        port: env("SMTP_PORT"),
         auth: {
-          user: env("SMTP_USERNAME", "respuesta-automatica@grupo7.cl"),
-          pass: env("SMTP_PASSWORD", "Noreply###g7"),
+          user: env("SMTP_USERNAME"),
+          pass: env("SMTP_PASSWORD"),
         },
         // ... any custom nodemailer options
       },
       settings: {
-        defaultFrom: "respuesta-automatica@grupo7.cl",
-        defaultReplyTo: "respuesta-automatica@grupo7.cl",
+        defaultFrom: env("SMTP_USERNAME"),
       },
     },
   },
