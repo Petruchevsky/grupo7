@@ -1,0 +1,47 @@
+
+
+.modal {
+   max-width: 300px;
+   margin: 0 auto;
+   top: 5%
+}
+
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.title {
+   font-size: 2rem;
+   font-weight: bold;
+   color: rgb(73, 173, 255);
+}
+
+.divTitle {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   margin: 1.5rem;
+   box-shadow: 0 0 10px rgb(143, 143, 143);
+   border-radius: 10px;
+}
+
+.msje {
+   font-size: 1.6rem;
+   font-weight: bold;
+   letter-spacing: 1px;
+   color: orangered;
+   margin: 0;
+   padding: 0 1rem;
+   text-align: center;
+}
+
+.imgModal {
+   border-radius: 10px;
+   text-align: center;
+   box-shadow: 0 0 10px rgb(141, 141, 141);
+   margin-bottom: 1rem;
+}

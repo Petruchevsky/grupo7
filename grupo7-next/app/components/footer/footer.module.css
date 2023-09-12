@@ -1,0 +1,211 @@
+/* Estilos para pantallas más grandes que una tablet */
+.footerDiv {
+	background: linear-gradient(#d3d3d3, #ffffff, #cccccc);
+}
+
+.modalDiv {
+	width: 35% !important;
+}
+
+.contenedor {
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	align-items: flex-end;
+	justify-content: space-evenly;
+	margin-bottom: 1.5rem;
+	gap: 2rem;
+	padding: 1rem;
+}
+
+.caja {
+	width: 100% !important;
+	display: flex !important;
+	flex-direction: column !important;
+	border-radius: 10px !important;
+	text-align: center !important;
+	flex-shrink: 1 !important;
+	padding: 10px !important;
+	background: linear-gradient(
+		to left top,
+		rgb(255, 255, 255),
+		rgb(233, 233, 233),
+		rgb(255, 255, 255)
+	) !important ;
+}
+
+.cajaEnlaces {
+	width: 30% !important;
+	height: 100% !important;
+	display: flex !important;
+	flex-direction: column !important;
+	text-align: center !important;
+	flex-shrink: 1 !important;
+	padding: 0px 15px !important;
+	margin-bottom: 1.5rem;
+}
+
+.cajaMaps {
+	margin-bottom: 1.5rem;
+	width: 39%;
+}
+
+.cajaForm {
+	width: 30% !important;
+	height: 100% !important;
+	display: flex !important;
+	flex-direction: column !important;
+	border-radius: 10px !important;
+	text-align: center !important;
+	padding: 0px 15px !important;
+	margin-bottom: 1.5rem;
+}
+
+.cajaPie {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	flex-shrink: 1;
+	padding: 10px 5px;
+}
+
+/* Formulario */
+.formInput {
+	@apply bg-white border-2 rounded-lg px-3 py-3 w-full text-lg text-center leading-6 transition duration-300 ease-in-out shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.formTextarea {
+	@apply bg-white border-2 rounded-lg px-3 py-2 mb-3 w-full text-lg leading-6 transition duration-300 ease-in-out shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 h-48;
+}
+
+.formButton {
+	@apply bg-blue-600 text-white text-lg px-6 py-3 mb-4 rounded-full transition duration-300 ease-in-out hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.formLabel {
+	@apply text-orange-500 font-semibold text-xl py-1;
+}
+
+.cajaH1 {
+	margin: 1.5rem 0;
+	font-size: 2.2rem;
+	text-align: center;
+	color: orangered;
+	font-weight: bold;
+}
+
+.cajaPSm {
+	font-size: 12px;
+	text-align: center;
+	letter-spacing: 1px;
+	line-height: 1rem;
+	margin-bottom: 0;
+}
+
+.links {
+	transition: transform 0.3s ease !important;
+	transition-duration: 300ms !important;
+	text-decoration: none;
+	font-size: 2rem;
+	padding: 1.1rem 0;
+	color: rgb(51, 65, 148);
+}
+
+.links:hover {
+	color: #4bbdff !important;
+	transform: scale(1.2) !important;
+}
+
+/* Estilos para móviles */
+@media (max-width: 599px) {
+	
+	.contenedor {
+		flex-direction: column;
+		align-content: center;
+		align-items: center;
+	 }
+
+	 .cajaEnlaces {
+		width: 100% !important;
+		padding: 0px !important;
+		margin-bottom: 0;
+	}
+	
+	.cajaMaps {
+		margin-bottom: 0;
+		width: 100% !important;
+		padding: 0px !important;
+	}
+	
+	.cajaForm {
+		margin-bottom: 0;
+		width: 100% !important;
+		padding: 0px !important;
+	}
+
+	.cajaH1 {
+		margin: 1rem 0;
+		font-size: 1.8rem;
+		text-align: center;
+	}
+
+	.cajaPSm {
+		font-size: 9px;
+		text-align: center;
+		letter-spacing: 1px;
+		line-height: 1rem;
+		margin-bottom: 0;
+	}
+
+	.links {
+		transition: transform 0.3s ease !important;
+		text-decoration: none;
+		font-size: 1.6rem;
+		padding: .5rem 0;
+		color: rgb(51, 65, 148);
+	}
+}
+
+
+/* Estilos para tabletas */
+@media (min-width: 600px) and (max-width: 999px) {
+	
+	.contenedor {
+		flex-direction: column;
+		align-content: center;
+		align-items: center;
+	 }
+
+	 .cajaEnlaces {
+		width: 80% !important;
+		padding: 0px 15px !important;
+		margin-bottom: 0rem;
+	}
+	
+	.cajaMaps {
+		margin-bottom: 0;
+		width: 80% !important;
+		padding: 0px 15px !important;
+	}
+	
+	.cajaForm {
+		margin-bottom: 0;
+		width: 80% !important;
+		padding: 0px 15px !important;
+	}
+
+	.cajaH1 {
+		margin-bottom: 1rem;
+		font-size: 2.2rem;
+		text-align: center;
+	}
+
+	.links {
+		transition: transform 0.3s ease !important;
+		text-decoration: none;
+		font-size: 1.8rem;
+		padding: .5rem 0;
+		color: rgb(51, 65, 148);
+	}
+}

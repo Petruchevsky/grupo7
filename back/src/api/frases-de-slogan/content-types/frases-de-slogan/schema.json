@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "frases_de_slogans",
+  "info": {
+    "singularName": "frases-de-slogan",
+    "pluralName": "frases-de-slogans",
+    "displayName": "Frases de Slogan"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "frase": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
