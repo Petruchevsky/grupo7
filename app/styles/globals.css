@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos para pantallas grandes */
+:root {
+	--primary: #e99401;
+	--black: #262626;
+	--white: #fff;
+	--fuente-principal: "Outfit", sans-serif;
+}
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+	background-color: black;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+body {
+	font-size: 2rem;
+	font-family: var(--fuente-principal);
+	line-height: 1.5;
+	padding: 0 !important;
+	box-shadow: 0 0 35px white;
+	width: 100%;
+}
+
+.imgs {
+	border-radius: 10px;
+	box-shadow: 0 0 10px black;
+	width: 29%;
+}
+
+.bsw {
+	box-shadow: 0 0 5px white;
+}
+
+.bsg {
+	box-shadow: 0 0 15px gray;
+}
+
+.page-h1 {
+	font-weight: bold;
+	font-size: 3.5rem;
+	text-align: center;
+	color: #4bbdff;
+	margin: 1.5rem 0;
+}
+
+.page-p {
+	text-align: justify;
+	padding: 1rem 5rem 2rem 5rem;
+	font-size: 1.6rem;
+}
+
+@keyframes spin {
+	from {
+		transform: rotateY(0deg);
+	}
+	to {
+		transform: rotateY(360deg);
+	}
+}
+
+.bg-404 {
+	background-image: linear-gradient(
+			to right,
+			rgb(0 0 0 / 0.9),
+			rgb(0 0 0 / 0.5)
+		),
+		url(/img/logo-gold.jpg);
+	background-repeat: no-repeat; /* Evita que la imagen se repita */
+	background-position: center; /* Centra la imagen */
+	background-size: contain; /* Asegura que la imagen cubra todo el elemento, puedes usar 'contain' si quieres que la imagen entera sea visible */
+	height: 80vh; /* Ajusta la altura al 100% de la altura de la ventana */
+}
+
+
+.links {
+	transition: transform 0.3s ease !important;
+	text-decoration: none;
+	font-size: 1.6rem;
+	padding: 5px 0;
+	color: rgb(51, 65, 148);
+}
+
+.text-h1 {
+	font-size: 3rem;
+	text-align: center;
+}
+
+.caja-nav {
+	padding: 0 25px !important;
+}
+
+
+/* Estilos para móviles */
+@media (max-width: 599px) {
+  
+   .page-h1 {
+     font-weight: bold;
+     font-size: 2rem;
+     text-align: center;
+     color: #4bbdff;
+   }
+   
+   .page-p {
+     text-align: justify;
+     padding: 1rem 3rem 2rem 3rem;
+     font-size: 1.6rem;
+   }
+ 
+
+   .imgs {
+     border-radius: 10px;
+     box-shadow: 0 0 10px black;
+     width: 93%;
+   }
+   
+   .links {
+     text-decoration: none;
+     font-size: 1.4rem;
+     padding: 5px 0;
+     color: rgb(189, 189, 189)
+   }
+   
+   /* Estilo de hover para los enlaces */
+   .links:hover {
+     color: #4bbdff !important;
+   }
+ 
+ }
+
+/* Estilos para tabletas */
+@media (min-width: 600px) and (max-width: 999px) {
+   
+	.page-h1 {
+		font-weight: bold;
+		font-size: 2.8rem;
+		text-align: center;
+		color: #4bbdff;
+		margin: 1.5rem 0;
+	}
+	
+
+	.text-h1 {
+     font-size: 2.5rem;
+     text-align: center;
+   }
+ 
+   .caja-nav {
+     padding: 0 25px !important;
+   }
+   
+   .imgs {
+     border-radius: 10px;
+     box-shadow: 0 0 10px black;
+     width: 30%;
+   }
+ 
+   .links {
+     text-decoration: none;
+     font-size: 1.8rem;
+     padding: 5px 0;
+   }
+   
+   /* Estilo de hover para los enlaces */
+   .links:hover {
+     color: #4bbdff !important;
+   }
+ }
+
+
+
+
+
