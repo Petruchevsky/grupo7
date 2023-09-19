@@ -16,22 +16,22 @@ const outfit = Outfit({
 	preload: true,
 });
 
-export const metadata = {
-	title: "Grupo 7",
-	description: "Venta de Productos Químicos y Limpieza al Detalle y Mayotista, ven y Conoce Nuestro Catálogo!",
+// export const metadata = {
+// 	title: "Grupo 7",
+// 	description: "Venta de Productos Químicos y Limpieza al Detalle y Mayotista, ven y Conoce Nuestro Catálogo!",
 
-	openGraph: {
-		title: "Grupo 7",
-		description: "Grupo 7, Ven y Conoce Nuestro Catálogo!",
-		url: "www.grupo7.cl",
-		siteName: "Grupo 7 - Químicos y Limpieza",
-		images: {
-			url: "https://res.cloudinary.com/dtqfrwjdm/image/upload/v1685815570/original_logo-fondos_oscuros_z4ew5b.jpg",
-			width: "500",
-			height: "500",
-		},
-	},
-};
+// 	openGraph: {
+// 		title: "Grupo 7",
+// 		description: "Grupo 7, Ven y Conoce Nuestro Catálogo!",
+// 		url: "www.grupo7.cl",
+// 		siteName: "Grupo 7 - Químicos y Limpieza",
+// 		images: {
+// 			url: "https://res.cloudinary.com/dtqfrwjdm/image/upload/v1685815570/original_logo-fondos_oscuros_z4ew5b.jpg",
+// 			width: "500",
+// 			height: "500",
+// 		},
+// 	},
+// };
 
 export default function RootLayout({ children }) {
 
