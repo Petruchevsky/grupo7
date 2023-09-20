@@ -1,25 +1,23 @@
 .article {
+	height: 28rem;
    display: flex;
    flex-direction: row;
    align-content: center;
-   align-items: center;
+   align-items: stretch;
    justify-content: space-between;
    flex-wrap: wrap;
    margin: 0rem 2rem 2rem 2rem;
    border-radius: 10px;
-   height: 50vh;
 	box-shadow: 0 0 5px black;
 }
 
 .cajaText {
-	width: 70%;
-	min-height: 100% !important;
+	width: 60%;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: space-around;
-	padding: 3rem 3rem;
-	border-radius: 10px;
+	padding: 0rem 3rem;
 }
 
 .postH1 {
@@ -44,7 +42,7 @@
 }
 
 .imgs {
-	width: 30% !important;
+	width: 40%;
 	height: 100%;
 	border-radius: 10px 0 0 10px;
 }
@@ -67,26 +65,11 @@
 @media (min-width: 768px) and (max-width: 1023px) {
 
 	.article {
-		display: flex;
-		flex-direction: row;
-		align-content: center;
-		align-items: center;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		margin: 0rem 1.5rem 1.5rem 1.5rem;
-      border-radius: 10px;
-		height: 40vh;
+		height: 20rem;
 	}
 
 	.cajaText {
-		width: 65%;
-		min-height: 100% !important;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		justify-content: space-around;
 		padding: 1.3rem 2rem;
-		border-radius: 10px;
 	}
 
 	.postH1 {
@@ -95,22 +78,15 @@
 
 	.postFecha {
 		font-size: 1.2rem;
-		font-weight: bold;
-		color: orangered;
 	}
 
 	.postP {
 		font-size: 1.2rem;
-		color: gray;
-		text-align: justify;
-		padding: 0;
-		margin: 0;
 	}
 
 	.imgs {
-		width: 33% !important;
-		height: 100%;
 		border-radius: 10px 0 0 10px;
+		
 	}
 
 	.links {
