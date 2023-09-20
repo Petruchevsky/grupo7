@@ -45,3 +45,9 @@
    box-shadow: 0 0 10px rgb(141, 141, 141);
    margin-bottom: 1rem;
 }
+
+.BtnIniciarSesion {
+   background-color: rgb(7, 57, 7);
+   padding: .8rem;
+   font-size: 1.3rem;
+}

@@ -37,7 +37,7 @@ const MyModalLogin = ({ show, onHide, title, message, imageUrl }) => {
 
 				<Modal.Footer>
 					<Link href="/iniciar-sesion">
-						<Button onClick={onHide} variant="success" className="p-3 fs-5">
+						<Button onClick={onHide} variant="success" className={styles.BtnIniciarSesion}>
 							INICIAR SESIÓN
 						</Button>
 					</Link>
