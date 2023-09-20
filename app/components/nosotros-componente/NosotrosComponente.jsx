@@ -4,6 +4,7 @@ import styles from "./nosotros.module.css"
 import { toast } from "react-toastify";
 import config from "@/app/utils/ToastConfig";
 import ReactMarkdown from "react-markdown";
+import { useEffect, useState } from "react";
 
 export const getData = async () => {
 	try {
@@ -17,14 +18,22 @@ export const getData = async () => {
 	} catch (error) {
 		console.error(error);
 		toast(error.message, config)
+      return null;
 	}
 }
 
-async function NosotrosComponente() {
+function NosotrosComponente() {
 
-	let data = await getData();
-	let imagenData = data.attributes.imagen.data;
-	let descripcion = data.attributes.descripcion;
+   let [data, setData] = useState()
+
+	useEffect(()=>{
+      getData().then(data=>{
+         setData(data)
+      })
+   }, [])
+
+	let imagenData = data?.attributes?.imagen?.data;
+	let descripcion = data?.attributes?.descripcion;
 
 	return (
 		<div>
