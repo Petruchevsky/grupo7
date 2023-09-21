@@ -90,7 +90,7 @@ const MyNavbar = () => {
 							</Nav.Link>
 							<Nav.Link
 								className={`${styles.links} ${styles.carritoDiv}`}
-								href="https://www.instagram.com/grupo7_social/"
+								href="https://www.instagram.com/gruposiete_7/"
 								rel="noopener noreferer"
 								target="_blank"
 							>
