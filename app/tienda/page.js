@@ -1,11 +1,18 @@
 import React from 'react'
 import TiendaComponente from '../components/tienda-componente/TiendaComponente'
 
+
 export const metadata = {
-	title: "Tienda G7",
-	description: "Todos nuestros productos son Biodegradables",
-	keywords: "tienda",
-};
+	openGraph: {
+	  title: "Tienda G7",
+	  description: "Productos 100% Biodegradables",
+	  images: {
+		 url: "https://res.cloudinary.com/dtqfrwjdm/image/upload/v1695335899/logo_cuadrado_8e31427e86.jpg"
+	  },
+	  locale: 'es_CL',
+	  type: 'website',
+	}
+ }
 
 
 function Tienda() {

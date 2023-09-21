@@ -1,10 +1,17 @@
 import RegistrarseComponente from "../components/registrarse-componente/RegistrarseComponente"
 
+
 export const metadata = {
-	title: "Registrarse G7",
-	description: "Registrate ya en Grupo 7",
-	keywords: "registrarse",
-};
+	openGraph: {
+	  title: "Registrarse G7",
+	  description: "Registrate ya en Grupo 7",
+	  images: {
+		 url: "https://res.cloudinary.com/dtqfrwjdm/image/upload/v1695335899/logo_cuadrado_8e31427e86.jpg"
+	  },
+	  locale: 'es_CL',
+	  type: 'website',
+	}
+ }
 
 function Registrarse() {
   return (
