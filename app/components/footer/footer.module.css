@@ -46,6 +46,7 @@
 }
 
 .cajaMaps {
+	display: none;
 	margin-bottom: 1.5rem;
 	width: 39%;
 }

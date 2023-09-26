@@ -1,5 +1,5 @@
 .headerBgImage {
-   background-image: linear-gradient(to right, rgb(0 0 0 / .9), rgb(0 0 0 / .5)), url(/img/bubbles.avif);
+   background-image: linear-gradient(to right, rgb(0 0 0 / 1),rgb(0 0 0 / .1),rgb(0 0 0 / .1), rgb(0 0 0 / .1)), url(/img/bubbles.avif);
    background-position: center bottom;
    background-size: cover;
    background-attachment: scroll;
@@ -11,7 +11,7 @@
 }
 
 .cajaH1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
 	text-align: center;
   color: lightgrey;
   margin: 0 auto;
