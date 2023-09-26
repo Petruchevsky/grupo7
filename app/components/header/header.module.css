@@ -1,5 +1,5 @@
 .headerBgImage {
-   background-image: linear-gradient(to right, rgb(0 0 0 / 1),rgb(0 0 0 / .1),rgb(0 0 0 / .1), rgb(0 0 0 / .1)), url(/img/bubbles.avif);
+   background-image: linear-gradient(to right, rgb(0 0 0 / 1),rgb(0 0 0 / 1),rgb(0 0 0 / .7), rgb(0 0 0 / .5));
    background-position: center bottom;
    background-size: cover;
    background-attachment: scroll;
