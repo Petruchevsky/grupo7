@@ -65,15 +65,16 @@
 @media (min-width: 768px) and (max-width: 1023px) {
 
 	.article {
-		height: 20rem;
+		height: 24rem;
 	}
 
 	.cajaText {
 		padding: 1.3rem 2rem;
+		width: 55%;
 	}
 
 	.postH1 {
-		font-size: 1.7rem;
+		font-size: 1.8rem;
 	}
 
 	.postFecha {
@@ -81,12 +82,13 @@
 	}
 
 	.postP {
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 	}
 
 	.imgs {
 		border-radius: 10px 0 0 10px;
-		
+		min-height: 100%;
+		width: 45%;
 	}
 
 	.links {
@@ -135,17 +137,17 @@
 		margin: 0;
 	}
 	.postH1 {
-		font-size: 1.4rem;
+		font-size: 1.8rem;
 	}
 
 	.postFecha {
-		font-size: 1rem;
+		font-size: 1.2rem;
 		font-weight: normal;
 		color: orangered;
 	}
 
 	.postP {
-		font-size: 1rem;
+		font-size: 1.4rem;
 		color: gray;
 		text-align: justify;
 		padding: 0 2rem;
@@ -154,7 +156,7 @@
 
 	.links {
 		text-decoration: none;
-		font-size: 1rem;
+		font-size: 1.4rem;
 		padding: 0;
 		margin: 0;
 		color: rgb(20, 78, 238);

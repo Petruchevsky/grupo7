@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import config from "@/app/utils/ToastConfig";
 import "react-toastify/dist/ReactToastify.css";
 import Producto from "../producto/Producto";
 import styles from "./tienda.module.css";

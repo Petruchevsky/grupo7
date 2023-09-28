@@ -73,23 +73,23 @@
 
 /* Formulario */
 .formInput {
-	@apply bg-white border-2 rounded-lg px-3 py-3 w-full text-lg text-center leading-6 transition duration-300 ease-in-out shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500;
+	@apply bg-white border-2 rounded-lg px-3 py-3 w-full text-2xl text-center leading-6 transition duration-300 ease-in-out shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500;
 }
 
 .formTextarea {
-	@apply bg-white border-2 rounded-lg px-3 py-2 mb-3 w-full text-lg leading-6 transition duration-300 ease-in-out shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 h-48;
+	@apply bg-white border-2 rounded-lg px-3 py-2 mb-3 w-full text-2xl leading-6 transition duration-300 ease-in-out shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 h-44;
 }
 
 .formButton {
-	@apply bg-blue-600 text-white text-lg px-6 py-3 mb-4 rounded-full transition duration-300 ease-in-out hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500;
+	@apply bg-blue-600 text-white text-2xl px-6 py-3 mb-4 rounded-full transition duration-300 ease-in-out hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500;
 }
 
 .formLabel {
-	@apply text-orange-500 font-semibold text-xl py-1;
+	@apply text-orange-500 font-semibold text-2xl py-1;
 }
 
 .cajaH1 {
-	margin: 1.5rem 0;
+	margin: 1.8rem 0;
 	font-size: 2.2rem;
 	text-align: center;
 	color: orangered;
@@ -97,7 +97,7 @@
 }
 
 .cajaPSm {
-	font-size: 12px;
+	font-size: 1.2rem;
 	text-align: center;
 	letter-spacing: 1px;
 	line-height: 1rem;
@@ -147,22 +147,22 @@
 
 	.cajaH1 {
 		margin: 1rem 0;
-		font-size: 1.8rem;
+		font-size: 2rem;
 		text-align: center;
 	}
 
 	.cajaPSm {
-		font-size: 9px;
+		font-size: 1.2rem;
 		text-align: center;
 		letter-spacing: 1px;
-		line-height: 1rem;
+		line-height: 1.5rem;
 		margin-bottom: 0;
 	}
 
 	.links {
 		transition: transform 0.3s ease !important;
 		text-decoration: none;
-		font-size: 1.6rem;
+		font-size: 1.8rem;
 		padding: .5rem 0;
 		color: rgb(51, 65, 148);
 	}
@@ -198,7 +198,7 @@
 
 	.cajaH1 {
 		margin-bottom: 1rem;
-		font-size: 2.2rem;
+		font-size: 2rem;
 		text-align: center;
 	}
 

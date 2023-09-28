@@ -11,7 +11,7 @@
 }
 
 .cajaH1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
 	text-align: center;
   color: lightgrey;
   margin: 0 auto;
@@ -44,7 +44,7 @@
   }
 
   .cajaH1 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     padding: 0 1.5rem 0 0;
   }
 
@@ -54,7 +54,7 @@
  @media (min-width: 768px) and (max-width: 1023px) {
   
   .cajaH1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
     color: lightgrey;
     margin: 0 auto;

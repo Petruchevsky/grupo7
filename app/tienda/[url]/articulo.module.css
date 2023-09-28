@@ -9,12 +9,11 @@
    text-align: center;
    margin: 0 auto;
    border-bottom: solid .3px lightgray;
-   padding: 2rem 0;
+   padding: 2rem;
    width: 100%;
 }
 
 .observacion span {
-   color: red;
    font-weight: bold;
 }
 
@@ -81,7 +80,7 @@
 }
 
 .articuloP {
-	font-size: 1.2rem;
+	font-size: 1.6rem;
 	color: gray;
 	text-align: justify;
 	padding: 0rem 1rem 0rem 0rem;
@@ -135,21 +134,21 @@
    }
    
    .articuloH1 {
-      font-size: 1.8rem;
+      font-size: 2rem;
       font-weight: bold;
       color: #4bbdff;
       margin: 0rem 0rem 0.5rem 0rem;
    }
    
    .articuloPrecio {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       font-weight: bold;
       color: orangered;
       margin-bottom: 1rem;
    }
    
    .articuloP {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       color: gray;
       text-align: left;
       padding: 0rem 1rem 0rem 0rem;
@@ -207,21 +206,21 @@
    }
    
    .articuloH1 {
-      font-size: 1.8rem;
+      font-size: 2.2rem;
       font-weight: bold;
       color: #4bbdff;
       margin: 0rem 0rem 0.5rem 0rem;
    }
    
    .articuloPrecio {
-      font-size: 1.4rem;
+      font-size: 1.8rem;
       font-weight: bold;
       color: orangered;
       margin-bottom: 1rem;
    }
    
    .articuloP {
-      font-size: 1rem;
+      font-size: 1.4rem;
       color: gray;
       text-align: justify;
       padding: 0;

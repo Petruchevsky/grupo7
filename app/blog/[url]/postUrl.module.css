@@ -77,7 +77,7 @@
    }
    
    .postFecha {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       font-weight: bold;
       color: orangered;
       text-align: center;
@@ -85,7 +85,7 @@
    }
    
    .postP {
-      font-size: 1.2rem;
+      font-size: 1.6rem;
       color: gray;
       text-align: justify;
       padding: 0;
@@ -114,7 +114,7 @@
 
 	.pageH1 {
       margin: 1rem 1rem 0 1rem;
-      font-size: 1.8rem;
+      font-size: 2rem;
    }
 
    .contenedor {
@@ -144,7 +144,7 @@
    }
    
    .postP {
-      font-size: 1.1rem;
+      font-size: 1.4rem;
       color: gray;
       text-align: justify;
       padding: 0;
