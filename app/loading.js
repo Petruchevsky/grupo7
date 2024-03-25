@@ -1,4 +1,9 @@
-export default function Loading() {
-  // Or a custom loading skeleton component
-  return <p>Loading...</p>
+function Loading() {
+  return (
+    <h1>
+      Loading...
+    </h1>
+  )
 }
+
+export default Loading
