@@ -1,0 +1,291 @@
+header {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.main-container {
+	display: flex;
+	justify-content: space-between;
+	gap: 10rem;
+	align-items: center;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.logo-header {
+	height: auto;
+	width: 30rem;
+	margin: 0 auto;
+	padding-right: 2rem;
+}
+
+.title-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+	line-height: 5rem;
+}
+
+.grupo7 {
+	font-size: 6rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: var(--blue);
+}
+
+.slogan {
+	font-size: 3rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: var(--darkgreen);
+}
+
+.header-button-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	padding-right: 5rem;
+}
+
+/* ---------------------------------------------------------------------------------------------------*/
+
+/* Estilos para Pantallas Grandes */
+@media (max-width: 2000px) and (min-width: 1440px) {
+	header {
+		padding: 4rem 0;
+	}
+	
+	.logo {
+		width: 16rem !important;
+	}
+
+	.orlando-container {
+		line-height: 3rem !important;
+	}
+
+	.abogado {
+		font-size: 3rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: var(--white);
+	}
+	
+	.orlando {
+		font-size: 3rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: var(--white);
+	}
+	
+	.rojas {
+		font-size: 3rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: var(--white);
+	}
+
+	.derecho-container {
+		line-height: 3rem !important;
+	}
+
+	.experto-en {
+		font-size: 2.5rem !important;	}
+
+	.derecho {
+		font-size: 3.5rem;
+	}
+
+	.sucesorio {
+		font-size: 2.5rem !important;	}
+
+	.key {
+		font-size: 3rem;
+	}
+}
+
+/* ---------------------------------------------------------------------------------------------------*/
+
+/* Estilos para Laptops */
+@media (max-width: 1439px) and (min-width: 1024px) {
+	header {
+		padding: 3rem 0;
+	}
+	
+	.logo {
+		width: 15rem !important;
+	}
+
+	.orlando-container {
+		line-height: 3rem;
+	}
+
+	.abogado {
+		font-size: 2.8rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: var(--white);
+	}
+	
+	.orlando {
+		font-size: 2.8rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: var(--white);
+	}
+	
+	.rojas {
+		font-size: 2.8rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: var(--white);
+	}
+
+	.derecho-container {
+		line-height: 3rem;
+	}
+
+	.experto-en {
+		font-size: 2.5rem;
+	}
+
+	.derecho {
+		font-size: 3.5rem !important;
+	}
+
+	.sucesorio {
+		font-size: 2.5rem;
+	}
+
+	.key {
+		font-size: 2.5rem;
+	}
+}
+
+/* ---------------------------------------------------------------------------------------------------*/
+
+/* Estilos para Tablets */
+@media (max-width: 1023px) and (min-width: 601px) {
+	header {
+		padding: 3rem 3rem !important;
+		width: 100% !important;
+	}
+
+	.main-container {
+		width: 100% !important;
+
+	}
+
+	.logo {
+		width: 14rem !important;
+	}
+
+	.orlando-container {
+		line-height: 2.5rem !important;
+	}
+
+	.abogado {
+		font-size: 2.5rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: var(--white);
+	}
+	
+	.orlando {
+		font-size: 2.5rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: var(--white);
+	}
+	
+	.rojas {
+		font-size: 2.5rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: var(--white);
+	}
+
+	.derecho-container {
+		line-height: 2.5rem !important;
+	}
+
+	.experto-en {
+		font-size: 2rem !important;
+	}
+
+	.derecho {
+		font-size: 2.7rem !important;
+	}
+
+	.sucesorio {
+		font-size: 2rem !important;
+	}
+
+	.key {
+		font-size: 2rem;
+		margin: .5rem;
+
+	}
+}
+
+/* ---------------------------------------------------------------------------------------------------*/
+
+/* Estilos para Móviles */
+@media (max-width: 600px) {
+	header {
+		justify-content: center;
+		padding: 3rem 5rem !important;
+	}
+
+	.container-logo-abogado {
+		width: 100%;
+		gap: 1rem;
+		display: flex;
+		justify-content: center;
+	}
+	.logo {
+		width: 10rem;
+		padding: 0;
+		margin: 0;
+	}
+
+	.orlando-container {
+		line-height: 2.2rem;
+		text-align: left;
+	}
+
+	.abogado {
+		font-size: 2.3rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: var(--white);
+	}
+	
+	.orlando {
+		font-size: 2.3rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: var(--white);
+	}
+	
+	.rojas {
+		font-size: 2.3rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: var(--white);
+	}
+
+	.derecho-container {
+		display: none;
+	}
+
+	.key {
+		font-size: 1.6rem;
+		margin: 1rem;
+	}
+}

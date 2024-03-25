@@ -1,26 +1,40 @@
-
-import Slider from "./components/slider/Slider"
-
+import Slider from "./components/Slider";
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import ProductosDestacados from "./components/ProductosDestacados";
+import Image from "next/image";
+import "./page.css";
 
 export const metadata = {
-  openGraph: {
-    title: "Grupo 7 - Inicio",
-    description: "Bienvenidos a Grupo 7",
-    images: {
-      url: "https://res.cloudinary.com/dtqfrwjdm/image/upload/v1695335899/logo_cuadrado_8e31427e86.jpg"
-    },
-    locale: 'es_CL',
-    type: 'website',
-  }
+	title: "Inicio",
+	description: "Bienvenidos a Grupo 7",
+};
+
+function Home() {
+	return (
+		<main>
+			<Header />
+			<Navbar />
+			<section className="main-container-y">
+				<Slider />
+			</section>
+			<hr className="w-75 m-auto" />
+			<section>
+				<ProductosDestacados />
+			</section>
+			<hr className="w-75 m-auto" />
+			<div className="home-banner">
+				<Image
+					src="/img/bannerG7.png"
+					width={1700}
+					height={400}
+					alt="Banner G7"
+				/>
+			</div>
+			<Footer />
+		</main>
+	);
 }
 
-export default function Home() {
-
-  return (
-    <div>
-      <Slider />
-    </div>
-  )
-}
-
-
+export default Home;

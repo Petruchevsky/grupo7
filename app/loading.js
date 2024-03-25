@@ -1,12 +1,4 @@
-import SpinnerG7 from "./components/spinnerG7/SpinnerG7";
-import React from 'react'
-
-function Loading() {
-  return (
-    <div>
-      <SpinnerG7 />
-    </div>
-  )
+export default function Loading() {
+  // Or a custom loading skeleton component
+  return <p>Loading...</p>
 }
-
-export default Loading

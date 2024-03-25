@@ -1,0 +1,849 @@
+:root {
+	--white: #ffffff;
+	--whitesmoke: rgb(227, 227, 227);
+	--lightgray: rgb(187, 187, 187);
+	--gray: #545454;
+	--black: #000000;
+	--green: #238023;
+	--lightgreen: #68d868;
+	--darkgreen: #005500;
+	--lightgreen: #affcaf;
+	--red: #be0b0b;
+	--lightred: #ff7979;
+	--darkred: #610000;
+	--yellow: #fec936;
+	--orange: #e37e11;
+	--blue: #2386ff;
+	--lightblue: #c7e1f9;
+	--darkblue: #1c57b5;
+
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	height: auto;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	color: var(--black);
+	background: var(--white);
+}
+
+.img-loading {
+	width: 80rem;
+	height: auto;
+	border-radius: 70px;
+	box-shadow: 0 0 120px lightskyblue;
+	margin-top: 4rem;
+}
+
+.img-404 {
+	width: 60rem;
+	height: auto;
+	border-radius: 70px;
+	box-shadow: 0 0 120px red;
+	margin-top: 4rem;
+}
+
+.loading-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	padding: 10rem;
+}
+
+.not-found-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	padding: 10rem;
+}
+
+.main-container-y {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	width: 100%;
+}
+
+.main-container-x {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+	width: 100%;
+}
+
+.button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 3rem;
+	padding: 2rem 0;
+	width: 100%;
+}
+
+.logo-sm {
+	width: 25rem;
+	height: auto;
+}
+
+.text-icon-aligner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	font-size: 3rem;
+}
+
+h1 {
+	font-size: 3.3rem;
+	color: var(--blue);
+	font-weight: 500;
+	margin-bottom: 3rem;
+}
+
+.h1-page {
+	font-weight: 400;
+	font-size: 4.5rem;
+	text-align: center;
+	color: var(--blue);
+	margin-bottom: 4rem;
+}
+
+h2 {
+	font-size: 3rem;
+	color: var(--orange);
+	text-align: center;
+}
+
+h3 {
+	font-size: 3rem;
+	color: var(--white);
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	font-weight: 200;
+	text-decoration: none;
+}
+
+h4 {
+	font-size: 2.6rem;
+	color: var(--white);
+	/* font-weight: bold; */
+	margin-bottom: 1.5rem;
+}
+
+p {
+	font-size: 2.4rem;
+	color: var(--darkblue);
+	text-align: justify;
+	line-height: 4rem;
+	margin-bottom: 3rem;
+}
+
+.pre-tag {
+	font-size: 2.4rem;
+	color: var(--white);
+	text-align: justify;
+	letter-spacing: 0.5px;
+	line-height: 5rem;
+	margin-bottom: 2rem;
+	font-family: 'Inter', 'Segoe UI';
+	white-space: pre-wrap;
+}
+
+label {
+	font-size: 2.4rem;
+	color: var(--darkblue);
+	text-align: left;
+	letter-spacing: 0.5px;
+	line-height: 4rem;
+	margin-bottom: 0rem;
+	width: 100%;
+	font-weight: 400;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+	font-size: 2.4rem;
+	text-align: left;
+	padding: 1.2rem 2.5rem;
+	border-radius: 8px;
+	border: solid 2px var(--blue);
+	transition: all 400ms;
+	margin-bottom: 5rem;
+	width: 100%;
+}
+
+textarea {
+	font-size: 2.4rem;
+	text-align: left;
+	padding: 1rem 2rem;
+	border: solid 2px var(--blue);
+	border-radius: 10px;
+	transition: all 400ms;
+	height: 30rem;
+	width: 100%;
+	font-family: inherit;
+	line-height: 3.5rem;
+	margin-bottom: 5rem;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+textarea:hover {
+	cursor: pointer;
+	box-shadow: inset 0 0 10px var(--blue);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+	box-shadow: 0 0 15px var(--green);
+	color: var(--blue);
+	outline: none;
+	border: solid 2px var(--green);
+}
+
+.link-button, .link-button-success, .link-button-danger {
+	font-size: 2.4rem;
+	font-weight: 400;
+	padding: .8rem;
+	border-radius: 8px;
+	color: var(--white);
+	transition: all 200ms;
+	width: 30rem;
+	text-decoration: none;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.link-button {
+	background-color: var(--blue);
+}
+
+.link-button:hover,
+.active {
+	cursor: pointer;
+	background-color: var(--darkblue);
+	color: var(--white);
+}
+
+.link-button-danger {
+	border: solid 2px var(--red);
+	background-color: var(--lightred);
+}
+
+.link-button-danger:hover {
+	cursor: pointer;
+	background-color: var(--darkred);
+	color: var(--white);
+	border: solid 2px var(--red);
+}
+
+.link-button-success {
+	background-color: var(--green);
+}
+
+.link-button-success:hover {
+	cursor: pointer;
+	background-color: var(--darkgreen);
+	color: var(--white);
+}
+
+.svg {
+	color: var(--white);
+	font-size: 3rem;
+}
+
+.link-button > svg, .link-button-success > svg, .link-button-danger > svg {
+	fill: currentColor;
+	font-size: 3rem;
+}
+
+.link-button > svg:hover {
+	color: var(--white);
+	cursor: pointer;
+}
+
+.link-footer, .link-footer > p {
+	font-size: 2.4rem;
+	color: var(--white);
+	font-weight: 200;
+	transition: all 300ms ease-in-out;
+	text-decoration: none;
+}
+
+.link-footer:hover, .link-footer > p:hover {
+	color: var(--yellow);
+	transform: scale(1.02);
+}
+
+.link, .link > p {
+	font-size: 2.4rem;
+	color: var(--darkblue);
+	font-weight: 500;
+	transition: all 300ms ease-in-out;
+	text-decoration: none;
+}
+
+.link:hover, .link > p:hover {
+	color: var(--orange);
+	transform: scale(1.02);
+}
+
+.success {
+	background-color: var(--green);
+	color: var(--black);
+
+}
+
+.error {
+	background-color: var(--red);
+	color: var(--white);
+}
+
+.success, .error {
+	padding: 1.2rem 3rem;
+	border-radius: 8px;
+	text-align: center;
+	width: 100%;
+	margin: 3rem 0 1rem 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.hidden {
+	display: none;
+}
+
+.black-color {
+	color: var(--black);
+}
+
+.text-center {
+	text-align: center;
+}
+
+.py-1 {
+	padding: 1rem 1.5rem;
+  }
+
+.W-100 {
+	width: 100% !important;
+}
+
+.m-auto {
+	margin: 0 auto;
+}
+
+.m-0 {
+	margin: 0;
+}
+
+.text-l {
+	text-align: left !important;
+
+}
+
+.ishadow {
+	box-shadow: 5px -5px 15px var(--whitesmoke)
+}
+
+/* --------------------------------------------------------------------------- */
+
+/* Estilos para Pantallas Grandes */
+@media (max-width: 2000px) and (min-width: 1440px) {
+
+	.img-loading {
+		width: 50rem;
+		border-radius: 60px;
+	}
+
+	.img-404 {
+		width: 37rem;
+		border-radius: 50px;
+		margin-top: 2rem;
+	}
+	
+	.loading-container {
+		padding: 8rem;
+	}
+
+	.not-found-container {
+		padding: 6rem;
+	}
+	
+	.logo-sm {
+		width: 16rem;
+		height: auto;
+	}
+
+	.button-container {
+		gap: 2rem;
+	}
+
+	.icon-key {
+		width: 3rem;
+		font-size: 3rem;
+	}
+
+	.text-icon-aligner {
+		font-size: 2rem;
+	}
+	
+	h1 {
+		font-size: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	h2 {
+		font-size: 2.2rem;
+	}
+
+	h3 {
+		font-size: 2rem;
+	}
+
+	h4 {
+		font-size: 1.8rem;
+		margin-bottom: 1rem;
+	}
+
+	p {
+		font-size: 1.6rem;
+		line-height: 3rem;
+		margin-bottom: 2rem;
+	}
+
+	.pre-tag {
+		font-size: 1.6rem;
+		margin-bottom: 1rem;
+		line-height: 3.5rem;
+	}
+
+	.link, .link > p {
+		font-size: 1.6rem;
+	}
+
+	label {
+		font-size: 1.6rem;
+		line-height: 3rem;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"] {
+		font-size: 1.4rem;
+		padding: 1.2rem 1.5rem;
+		margin-bottom: 3rem;
+	}
+
+	textarea {
+		font-size: 1.4rem;
+		height: 20rem;
+		padding: 1rem 1.5rem;
+		line-height: 2rem;
+	}
+
+	.link-button, .link-button-success, .link-button-danger {
+		font-size: 1.6rem;
+		padding: 1rem 1.5rem;
+		width: 40rem;
+	}
+
+	svg {
+		font-size: 2rem;
+	}
+
+	.success, .error {
+		margin: 2rem 0 0rem 0;
+	}
+}
+
+/* --------------------------------------------------------------------------- */
+
+/* Estilos para Laptops */
+@media (max-width: 1439px) and (min-width: 1024px) {
+
+	.img-loading {
+		width: 50rem;
+		border-radius: 60px;
+	}
+
+	.img-404 {
+		width: 35rem;
+		border-radius: 50px;
+		margin-top: 2rem;
+	}
+	
+	.loading-container {
+		padding: 8rem;
+	}
+
+	.not-found-container {
+		padding: 8rem 0;
+	}
+	
+	.logo-sm {
+		width: 16rem;
+		height: auto;
+	}
+
+	.button-container {
+		gap: 2rem;
+	}
+
+	.icon-key {
+		width: 3rem;
+		font-size: 3rem;
+	}
+
+	.text-icon-aligner {
+		font-size: 2rem;
+	}
+	
+	h1 {
+		font-size: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	h2 {
+		font-size: 2.2rem;
+	}
+
+	h3 {
+		font-size: 2rem;
+	}
+
+	h4 {
+		font-size: 1.8rem;
+		margin-bottom: 1rem;
+	}
+
+	p {
+		font-size: 1.6rem;
+		line-height: 3rem;
+		margin-bottom: 2rem;
+	}
+
+	.pre-tag {
+		font-size: 1.6rem;
+		margin-bottom: 1rem;
+		line-height: 3rem;
+	}
+
+	.link, .link > p {
+		font-size: 1.6rem;
+	}
+
+	label {
+		font-size: 1.6rem;
+		line-height: 3rem;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"] {
+		font-size: 1.4rem;
+		padding: 1.2rem 1rem;
+		margin-bottom: 3rem;
+	}
+
+	textarea {
+		font-size: 1.4rem;
+		height: 20rem;
+		padding: 1rem 1.5rem;
+		line-height: 2rem;
+
+	}
+
+	.link-button, .link-button-success, .link-button-danger {
+		flex: 0 0 48%;
+		width: 37rem;
+		font-size: 1.6rem;
+		padding: 1rem 1.5rem;
+	}
+
+	svg {
+		font-size: 2rem;
+	}
+
+	.success, .error {
+		margin: 2rem 0 0rem 0;
+	}
+
+}
+
+/* --------------------------------------------------------------------------- */
+
+/* Estilos para Tablets */
+@media (max-width: 1023px) and (min-width: 601px) {
+
+	.img-loading {
+		width: 40rem;
+		border-radius: 55px;
+		margin-top: 2rem;
+	}
+
+	.img-404 {
+		width: 35rem;
+		border-radius: 50px;
+		margin-top: 2rem;
+	}
+	
+	.loading-container {
+		padding: 14rem;
+	}
+
+	.not-found-container {
+		padding: 8rem 0;
+	}
+	
+	.logo-sm {
+		width: 14rem;
+		height: auto;
+	}
+
+	.button-container {
+		gap: 1rem;
+		padding: 1rem 0;
+	}
+
+	.icon-key {
+		width: 3rem;
+		font-size: 2.5rem;
+	}
+
+	.text-icon-aligner {
+		font-size: 1.7rem;
+	}
+	
+	h1 {
+		font-size: 1.8rem;
+		margin-bottom: 2rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	h3 {
+		font-size: 1.8rem;
+	}
+
+	h4 {
+		font-size: 1.7rem;
+		margin-bottom: 0rem;
+	}
+
+	p {
+		font-size: 1.4rem;
+		line-height: 2.6rem;
+		margin-bottom: 2rem;
+	}
+
+	.pre-tag {
+		font-size: 1.4rem;
+		margin-bottom: 1rem;
+		line-height: 2.5rem;
+	}
+
+	.link, .link > p {
+		font-size: 1.4rem;
+	}
+
+	label {
+		font-size: 1.4rem;
+		line-height: 3rem;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"] {
+		font-size: 1.3rem;
+		padding: 1rem;
+		margin-bottom: 2rem;
+		width: 100%;
+	}
+
+	textarea {
+		font-size: 1.3rem;
+		height: 15rem;
+		padding: 1rem 1.2rem;
+		line-height: 1.7rem;
+	}
+
+	.link-button, .link-button-success, .link-button-danger {
+		font-size: 1.4rem;
+		padding: 1rem 1.5rem;
+		border-radius: 6px;
+		flex: 0 0 48%;
+		width: 27rem;
+	}
+
+	svg {
+		font-size: 2rem;
+	}
+
+	.success, .error {
+		margin: 2rem 0 1rem 0;
+	}
+
+}
+
+/* --------------------------------------------------------------------------- */
+
+/* Estilos para Móviles */
+@media (max-width: 600px) {
+
+	.img-loading {
+		width: 30rem;
+		border-radius: 55px;
+		margin-top: 1rem;
+	
+	}
+	.img-404 {
+		width: 30rem;
+		border-radius: 55px;
+		margin-top: 1rem;
+	}
+	
+	.loading-container {
+		padding: 16rem 0;
+	}
+
+	.not-found-container {
+		padding: 6rem 0;
+	}
+	
+	.logo-sm {
+		width: 12rem;
+		height: auto;
+	}
+
+	.icon-key {
+		width: 3rem;
+		font-size: 2.5rem;
+	}
+
+	.text-icon-aligner {
+		font-size: 1.5rem;
+	}
+	
+	h1 {
+		font-size: 1.8rem;
+		margin-bottom: 2rem;
+	}
+
+	h2 {
+		font-size: 1.7rem;
+	}
+
+	h3 {
+		font-size: 1.8rem;
+		font-weight: 600;
+	}
+
+	h4 {
+		font-size: 1.7rem;
+		margin-bottom: 0rem;
+	}
+
+	p {
+		font-size: 1.4rem;
+		line-height: 2.3rem;
+		margin-bottom: 2rem;
+	}
+
+	.pre-tag {
+		font-size: 1.4rem;
+		margin-bottom: 1rem;
+		line-height: 2.5rem;
+	}
+
+	.link, .link > p {
+		font-size: 1.4rem;
+	}
+
+	label {
+		font-size: 1.4rem;
+		line-height: 2.5rem;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"] {
+		font-size: 1.3rem;
+		text-align: left;
+		padding: 1rem;
+		margin-bottom: 2rem;
+		border-radius: 5px;
+		transition: all 400ms;
+	}
+
+	textarea {
+		font-size: 1.3rem;
+		height: 15rem;
+		padding: 1rem;
+		border-radius: 5px;
+		line-height: 1.7rem;
+		margin-bottom: 3rem;
+	}
+
+	input[type="submit"] {
+		font-size: 1.3rem;
+	}
+
+	.link-button, .link-button-success, .link-button-danger {
+		font-size: 1.4rem;
+		padding: 1rem 1.5rem;
+		border-radius: 5px;
+		flex: 0 0 100%;
+		width: 25rem;
+	}
+
+	svg {
+		font-size: 1.8rem;
+	}
+
+	.button-container {
+		flex-direction: column;
+		gap: 2rem;
+	  }
+
+	  .success, .error {
+		margin: 2rem 0 0 0;
+	}
+}

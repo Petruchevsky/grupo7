@@ -1,0 +1,12 @@
+.border-c {
+    border: none;
+    background: none;
+    height: auto;
+    object-fit: cover;
+    padding: 0rem;
+}
+
+.carousel-container {
+    padding: 7rem 0; 
+}
+

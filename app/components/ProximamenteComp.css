@@ -1,0 +1,271 @@
+.prox-container {
+   width: 70%;
+   margin: 0 auto;
+   padding: 5rem 0;
+   gap: 6rem;
+}
+
+.items-container {
+   display: flex;
+   flex-direction: column;
+   gap: 3rem;
+}
+
+.itemDiv {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   padding: 2rem;
+   border: solid .3px rgb(221, 221, 221);
+   border-radius: 15px;
+ }
+ 
+.itemDiv img {
+   width: 25%;
+   height: auto;
+}
+
+.textoDiv {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   width: 80%;
+   padding-right: 6rem;
+}
+
+.titulo {
+   color: #4bbdff;
+   font-weight: bold;
+   font-size: 2rem;
+}
+
+.parrafo {
+   color: gray;
+   font-size: 1.6rem;
+   font-weight: 400;
+   letter-spacing: 1px;
+   text-align: justify;
+}
+
+/* PAGINA SIN CONTENIDO DESDE STRAPI */
+.container2 {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   background: linear-gradient(to right, black, black, rgb(7, 38, 104), rgb(57, 116, 204), lightgray, white);
+   padding: 4rem 2rem;
+   gap: 3rem;
+   border-radius: 10px;
+   margin-top: 3rem;
+   box-shadow: 0 0 10px lightgray;
+}
+
+.container2 img {
+   width: 30%;
+   height: auto;
+   box-shadow: 0 0 20px white;
+   border-radius: 50%;
+}
+
+.container2 h1 {
+   color: white;
+   font-weight: bold;
+   text-align: center;
+   line-height: 5rem;
+   margin: auto 0;
+   width: 30%;
+}
+
+
+ /* Estilos para LapTops */
+ @media (min-width: 1024px) and (max-width: 1199px) {
+   .pageH1 {
+      font-weight: bold;
+      font-size: 3rem;
+      text-align: center;
+      color: #4bbdff;
+   }
+
+   .itemDiv img {
+      width: 28%;
+   }
+
+   .textoDiv {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 80%;
+      padding-right: 4rem;
+   }
+
+   .titulo {
+      color: #4bbdff;
+      font-weight: bold;
+      font-size: 2rem;
+   }
+   
+   .parrafo {
+      color: gray;
+      font-size: 1.4rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-align: justify;
+   }
+ }
+
+ /* Estilos para tabletas */
+ @media (min-width: 768px) and (max-width: 1023px) {
+
+   .pageH1 {
+      margin: 1rem 0 2rem 0;
+      font-size: 2.5rem;
+   }
+
+   .itemDiv {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+   }
+
+   .itemDiv img {
+      width: 30%;
+      max-height: 160px;
+
+   }
+
+   .textoDiv {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 80%;
+      padding-right: 4rem;
+   }
+
+   .titulo {
+      color: #4bbdff;
+      font-weight: bold;
+      font-size: 2rem;
+   }
+   
+   .parrafo {
+      color: gray;
+      font-size: 1.4rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-align: justify;
+   }
+
+   /* CSS SIN ITEMS */
+   .container2 img:last-child {
+       display: none;
+   }
+
+   .container2 img {
+      width: 45%;
+   }
+
+   .container2 h1 {
+      width: 45%;
+   }
+
+ }
+
+/* Estilos para móviles */
+@media (max-width: 767px) {
+
+   .prox-container {
+      padding: 1rem 2rem;
+      gap: 6rem;
+   }
+   
+   .pageH1 {
+      margin: 0;
+      font-size: 2rem;
+   }
+
+   .itemDiv{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin: 2rem 0;
+      padding: 2rem 3rem;
+      border-bottom: solid .3px rgb(221, 221, 221);
+      box-shadow: 0 0 10px lightgray;
+      border-radius: 10px;
+
+    }
+    
+    .itemDiv img {
+      width: 30%;
+      margin: 0 auto;
+      max-height: 130px;
+      padding-bottom: 1rem;
+   }
+   
+   .textoDiv {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      padding: 0;
+   }
+   
+   .titulo {
+      text-align: center;
+      font-size: 1.8rem;
+   }
+   
+   .parrafo {
+      letter-spacing: .5px;
+      font-size: 1.4rem;
+   }
+
+   /* CSS SIN ITEMS */
+   .container2 {
+      margin-top: 1rem;
+   }
+
+   .container2 img:last-child {
+       display: none;
+   }
+
+   .container2 img {
+      width: 45%;
+   }
+
+   .container2 h1 {
+      line-height: 2rem;
+      width: 45%;
+   }
+
+}
+
+/* ---------------------------------------------------------------------------------------------------*/
+/* Estilos para Pantallas 4K*/
+
+
+/* ---------------------------------------------------------------------------------------------------*/
+/* Estilos para Pantallas Grandes */
+@media (max-width: 2000px) and (min-width: 1440px) {
+	
+}
+
+/* ---------------------------------------------------------------------------------------------------*/
+/* Estilos para Laptops */
+@media (max-width: 1439px) and (min-width: 1024px) {
+	
+}
+
+/* ---------------------------------------------------------------------------------------------------*/
+/* Estilos para Tablets */
+@media (max-width: 1023px) and (min-width: 601px) {
+	
+}
+
+/* ---------------------------------------------------------------------------------------------------*/
+/* Estilos para Móviles */
+@media (max-width: 600px) {
+	
+}

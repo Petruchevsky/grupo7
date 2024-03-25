@@ -1,0 +1,93 @@
+/* ---------------------------------------------------------------------------------------------------*/
+/* Estilos para Pantallas 4K*/
+.card-prod {
+  width: 400px;
+  height: 650px;
+	display: flex;
+	flex-direction: column;
+  justify-content: space-between;
+	border-radius: 10px;
+  border: solid 1px var(--whitesmoke);
+	text-align: center;
+	padding: 2rem 1rem 3rem 1rem;
+	margin-bottom: 2rem;
+  box-shadow: 5px -5px 25px var(--whitesmoke)
+}
+
+.card-prod-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.img-prod {
+	margin: auto;
+  padding: 0;
+  width: 80%;
+  height: fit-content;
+}
+
+/* ---------------------------------------------------------------------------------------------------*/
+/* Estilos para Pantallas Grandes */
+@media (max-width: 2000px) and (min-width: 1440px) {
+	
+}
+
+/* ---------------------------------------------------------------------------------------------------*/
+/* Estilos para Laptops */
+@media (max-width: 1439px) and (min-width: 1024px) {
+	
+}
+
+/* ---------------------------------------------------------------------------------------------------*/
+/* Estilos para Tablets */
+@media (max-width: 1023px) and (min-width: 601px) {
+	
+  .card-prod {
+    width: 40%;
+  }
+
+  .img-prod {
+    margin: 1rem auto;
+    width: 14rem;
+  }
+
+}
+
+/* ---------------------------------------------------------------------------------------------------*/
+/* Estilos para Móviles */
+@media (max-width: 600px) {
+	
+  .card-prod {
+    min-width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 15px;
+    text-align: center;
+    align-items: center;
+    padding: 0px;
+ }
+
+ .card-prod-text {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   padding: 2rem 2rem 2rem 0rem ;
+ }
+
+ .img-prod {
+   margin: 0 1rem 1.5rem 1rem;
+   width: 10rem;
+ }
+
+}
+
+
+
+
+
+

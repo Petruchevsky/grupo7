@@ -1,26 +1,23 @@
-import React from 'react'
-import TiendaComponente from '../components/tienda-componente/TiendaComponente'
-
+import Header from "../components/Header";
+import Navbar from "../components/Navbar";
+import TiendaComp from "../components/TiendaComp";
+import Footer from "../components/Footer";
 
 export const metadata = {
-	openGraph: {
-	  title: "Tienda G7",
-	  description: "Productos 100% Biodegradables",
-	  images: {
-		 url: "https://res.cloudinary.com/dtqfrwjdm/image/upload/v1695335899/logo_cuadrado_8e31427e86.jpg"
-	  },
-	  locale: 'es_CL',
-	  type: 'website',
-	}
- }
+	title: "Tienda G7",
+	description: "Productos 100% Biodegradables",
+};
 
+async function Tienda() {
 
-function Tienda() {
-  return (
-	 <div>
-		<TiendaComponente />
-	 </div>
-  )
+	return (
+		<div>
+			<Header />
+			<Navbar />
+			<TiendaComp />
+			<Footer />
+		</div>
+	);
 }
 
-export default Tienda
+export default Tienda;

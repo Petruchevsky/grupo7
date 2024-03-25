@@ -1,0 +1,146 @@
+
+.post-url-container {
+   display: flex;
+   flex-direction: column;
+   width: 70%;
+   margin: 0 auto;
+   padding-top: 5rem;
+}
+
+.post-url-article {
+   display: block;
+   padding: 7rem 0;
+   border-radius: 10px;
+}
+
+.post-url-img-div {
+   float: left;
+   padding-right :5rem;
+}
+
+.post-url-img {
+   width: 800px;
+	height: auto;
+	border-radius: 10px;
+   border: solid 2px var(--blue);
+}
+
+
+/* Estilos para tabletas */
+@media (min-width: 600px) and (max-width: 999px) {
+
+	.pageH1 {
+      margin: 1rem 0 0 0;
+      font-size: 3rem;
+   }
+
+   .post-url-container
+ {
+      display: flex;
+      flex-direction: column;
+   }
+   
+   .post-url-article {
+      display: block;
+      /* flex-direction: row; */
+      /* align-content: center; */
+      /* align-items: center; */
+      /* justify-content: space-around; */
+      /* flex-wrap: wrap; */
+      margin: 0rem 2rem 2rem 2rem;
+      padding: 1.3rem 1.3rem;
+      border-radius: 10px;
+      /* height: 50vh; */
+   }
+   
+   .postFecha {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: orangered;
+      text-align: center;
+      margin-bottom: 2rem;
+   }
+   
+   .postP {
+      font-size: 1.6rem;
+      color: gray;
+      text-align: justify;
+      padding: 0;
+      margin: 0;
+      /* width: 50%; */
+   }
+   
+   .post-url-img-div {
+      width: 50%;
+   }
+   
+   .post-url-img {
+      width: 100% !important;
+      height: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px black;
+      float: left;
+      margin: 0 3rem 1rem 0;
+   }
+
+}
+
+
+/* Estilos para móviles */
+@media (max-width: 599px) {
+
+	.pageH1 {
+      margin: 1rem 1rem 0 1rem;
+      font-size: 2rem;
+   }
+
+   .post-url-container
+ {
+      display: flex;
+      flex-direction: column;
+   }
+   
+   .post-url-article {
+      display: block;
+      /* flex-direction: row; */
+      /* align-content: center; */
+      /* align-items: center; */
+      /* justify-content: space-around; */
+      /* flex-wrap: wrap; */
+      margin: 0rem 2rem 2rem 2rem;
+      padding: 1.3rem 0 0 0;
+      border-radius: 10px;
+      /* height: 50vh; */
+   }
+   
+   .postFecha {
+      font-size: 1.2rem;
+      font-weight: normal;
+      color: orangered;
+      text-align: center;
+      margin-bottom: .5rem;
+   }
+   
+   .postP {
+      font-size: 1.4rem;
+      color: gray;
+      text-align: justify;
+      padding: 0;
+      margin: 0;
+      /* width: 50%; */
+   }
+   
+   .post-url-img-div {
+      width: 100%;
+      margin: 0;
+   }
+   
+   .post-url-img {
+      width: 100% !important;
+      height: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px black;
+      float: left;
+      margin: 0 0 1.3rem 0;
+   }
+}

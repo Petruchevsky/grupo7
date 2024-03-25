@@ -1,0 +1,40 @@
+/* ---------------------------------------------------------------------------------------------------*/
+/* Estilos para Pantallas 4K*/
+
+.blog-container {
+   display: flex;
+   flex-direction: column;
+   width: 70%;
+   margin: 0 auto;
+   padding: 5rem;
+}
+
+.articles-container {
+   display: flex;
+   flex-direction: column;
+   gap: 4rem;
+}
+
+/* ---------------------------------------------------------------------------------------------------*/
+/* Estilos para Pantallas Grandes */
+@media (max-width: 2000px) and (min-width: 1440px) {
+	
+}
+
+/* ---------------------------------------------------------------------------------------------------*/
+/* Estilos para Laptops */
+@media (max-width: 1439px) and (min-width: 1024px) {
+	
+}
+
+/* ---------------------------------------------------------------------------------------------------*/
+/* Estilos para Tablets */
+@media (max-width: 1023px) and (min-width: 601px) {
+	
+}
+
+/* ---------------------------------------------------------------------------------------------------*/
+/* Estilos para Móviles */
+@media (max-width: 600px) {
+	
+}

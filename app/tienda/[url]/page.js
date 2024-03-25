@@ -1,6 +1,10 @@
+import Header from "@/app/components/Header";
+import Navbar from "@/app/components/Navbar";
+import Footer from "@/app/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./articulo.module.css";
+import "./tienda-url.css"
+import { FaWhatsapp } from "react-icons/fa";
 import ReactMarkdown from "react-markdown";
 
 export const metadata = {
@@ -9,7 +13,7 @@ export const metadata = {
 	keywords: "tienda",
 };
 
-export async function obtenerProductos(url) {
+const obtenerProductos = async (url) => {
 	return fetch(
 		`${process.env.NEXT_PUBLIC_APIURL}/api/productos?filters[url]=${url}&populate=imagen`,
 		{ cache: "no-store" }
@@ -38,57 +42,54 @@ async function Articulo({ params }) {
 
 
 	return (
-		<div className={styles.contenedor}>
-			<h2 className={styles.observacion}>
-				Recuerda que solo en tu primera compra deberás incluir el costo de
-				$1.500 correspondiente a nuestro envase retornable.
-				<br />
-				<span>
-					Los precios de nuestra tienda no incluyen el costo del envase.
-				</span>
-			</h2>
-			<div className={styles.main}>
-				<div className={styles.DivImgArt}>
-
-							<Image
-								src={data[0].attributes.imagen.data.attributes.url}
-								alt={`Imagen de Producto`}
-								width={300}
-								height={300}
-								className={styles.imgArt}
-							/>
-				</div>			
-	
-				<div className={styles.cajaText}>
-					<h1 className={styles.articuloH1}>{data[0].attributes.nombre}</h1>
-					<h2 className={styles.articuloPrecio}>{precio}</h2>
-					<ReactMarkdown className={styles.articuloP}>
-						{data[0].attributes.descripcion}
-					</ReactMarkdown>
-				</div>
-
-				<div className={styles.cajaBtns}>
-					<Link
-						className={styles.btnWhatsApp}
-						href="https://wa.me/56937131180"
-						target="_blank"
-						rel="noopener noreferer"
-					>
-						<Image
-							src="/img/whatsapp_PNG3.png"
-							width={200}
-							height={200}
-							alt="icono de whatsapp"
-							className={styles.btnWhatsApp}
-						/>
-					</Link>
-					<p className={styles.pedido}>COMPRAR!</p>
-					{/* <button className="btn btn-success">AGREGAR AL CARRITO</button>
-					<button className="btn btn-danger">QUITAR DEL CARRITO</button>
-					<button className="btn btn-primary">IR AL CARRITO</button> */}
-				</div>
-			</div>
-		</div>
+		<main>
+			<Header />
+			<Navbar />
+			<section className="url-main-container">
+				<h2 className="observacion">
+					Recuerda que solo en tu primera compra deberás incluir el costo de
+					$1.500 correspondiente a nuestro envase retornable.
+					<br />
+					<span>
+						Los precios de nuestra tienda no incluyen el costo del envase.
+					</span>
+				</h2>
+			
+				<section className="inner-container">
+					<div className="url-img-div">
+								<Image
+									src={data[0].attributes.imagen.data.attributes.url}
+									alt={`Imagen de Producto`}
+									width={300}
+									height={300}
+									className="url-img"
+								/>
+					</div>			
+			
+					<div className="div-text-url">
+						<h1>{data[0].attributes.nombre}</h1>
+						<h2>{precio}</h2>
+						<ReactMarkdown>
+							{data[0].attributes.descripcion}
+						</ReactMarkdown>
+					</div>
+			
+				
+						<div className="btn-div-url">
+							<Link
+								className="link-button-success"
+								href="https://wa.me/56937131180?text=Hola!%20Quisiera%20comprar%20un%20producto%20de%20Grupo%207!"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<FaWhatsapp/>Comprar!
+							</Link>
+						</div>
+					
+				</section>
+			</section>
+			<Footer />
+		</main>
 	);
 }
 

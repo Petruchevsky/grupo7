@@ -1,24 +1,44 @@
-import BlogComponente from '../components/blog-componente/BlogComponente'
-
+import BlogComponente from "../components/BlogComp";
+import Header from "../components/Header";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export const metadata = {
-	openGraph: {
-    title: "Tips G7",
-    description: "Mira Nuestros tips de Limpieza",
-		images: {
-			url: "https://res.cloudinary.com/dtqfrwjdm/image/upload/v1695335899/logo_cuadrado_8e31427e86.jpg",
-		},
-		locale: "es_CL",
-		type: "website",
-	},
+	title: "Tips G7",
+	description: "Mira Nuestros tips de Limpieza",
 };
 
-function Blog() {
-  return (
-    <div>
-      <BlogComponente />
-    </div>
-  )
+async function getPosts() {
+	try {
+		const response = await fetch(
+			`${process.env.NEXT_PUBLIC_APIURL}/api/blogs?populate=*`,
+			{ cache: "no-store" }
+		);
+
+		if (!response.ok) {
+			const errorData = await response.json();
+			const errorMessage = `Error: ${response.status}: ${errorData.message}`;
+			throw new Error(errorMessage);
+		}
+
+		const { data } = await response.json();
+		return data;
+	} catch (error) {
+		console.error(error);
+	}
 }
 
-export default Blog
+async function Blog() {
+	const data = await getPosts();
+
+	return (
+		<div>
+			<Header />
+			<Navbar />
+			<BlogComponente props={data} />
+			<Footer />
+		</div>
+	);
+}
+
+export default Blog;

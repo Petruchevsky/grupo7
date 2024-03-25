@@ -1,20 +1,49 @@
-import NosotrosComponente from "../components/nosotros-componente/NosotrosComponente";
-
+import NosotrosComp from "../components/NosotrosComp";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 export const metadata = {
-	openGraph: {
-		title: "Nosotros G7",
-		description: "Somos una gran empreza familiar en plena expansión!",
-		images: {
-			url: "https://res.cloudinary.com/dtqfrwjdm/image/upload/v1695335899/logo_cuadrado_8e31427e86.jpg",
-		},
-		locale: "es_CL",
-		type: "website",
-	},
+	title: "Nosotros G7",
+	description: "Somos una gran empreza familiar en plena expansión!",
 };
 
-function Nosotros() {
-	return <NosotrosComponente />;
+export const getNosotros = async () => {
+	try {
+		const response = await fetch(
+			`${process.env.NEXT_PUBLIC_APIURL}/api/nosotro?populate=*`,
+			{ cache: "no-store" }
+		);
+		if (response.ok) {
+			const { data } = await response.json();
+			return data;
+		} else {
+			const errorData = await response.json();
+			const errorMessage = `Error: ${response.status}: ${errorData.message}`;
+			throw new Error(errorMessage);
+		}
+	} catch (error) {
+		console.error(error);
+
+		return null;
+	}
+};
+
+async function Nosotros() {
+
+	const data = await getNosotros();
+	const descripcion = data?.attributes?.descripcion;
+	const imagenes = data?.attributes?.imagen?.data;
+
+
+	return (
+		<main>
+			<Header />
+			<Navbar />
+			<NosotrosComp descripcion={descripcion} imagenes={imagenes} />
+			<Footer />
+		</main>
+	);
 }
 
 export default Nosotros;
