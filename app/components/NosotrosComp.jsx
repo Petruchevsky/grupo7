@@ -3,7 +3,7 @@ import Image from "next/image";
 import "./NosotrosComp.css";
 import ReactMarkdown from "react-markdown";
 import Link from "next/link";
-import { Slide, Zoom, Bounce } from "react-awesome-reveal";
+import { Slide, Bounce } from "react-awesome-reveal";
 
 function NosotrosComp({ descripcion, imagenes }) {
 	return (
