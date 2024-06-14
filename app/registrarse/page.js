@@ -1,4 +1,4 @@
-import RegistrarseComponente from "../components/registrarse-componente/RegistrarseComponente"
+import RegistrarseComponente from "../components/RegistrarseComp"
 
 
 export const metadata = {

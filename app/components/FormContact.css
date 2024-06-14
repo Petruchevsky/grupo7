@@ -1,29 +1,36 @@
+/* Estilos para Pantallas 4k */
 .main-container-contact {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    padding: 7rem 0;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 5rem;
+	padding-bottom: 7rem;
 }
 
-.section-contact {
-    width: 40%;
+.form-container {
+	width: 30%;
 }
 
 .datos-container-contacto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 35%;
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+}
+
+.title-logo-div {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-right: 5rem;
 }
 
 .logo-contacto {
-    width: 40%;
-    height: auto;
-    /* margin: 0 auto; */
+	width: 15rem;
+	height: auto;
 }
 
 .section-datos {
@@ -32,204 +39,156 @@
 	justify-content: center;
 	align-items: center;
 	padding: 5rem 3rem 3rem 3rem;
-	line-height: 8rem;
-	margin-bottom: 1rem;
-	text-align: center;
-    width: 100%;
-    border: solid 2px var(--blue);
-    border-radius: 15px;
-}
-
-.title {
-    text-align: center;
-    margin-bottom: 8rem;
-}
-
-.successMsg {
-	color: var(--white);
-	background-color: var(--green);
-	padding: 1.4rem 3rem;
-	border-radius: 8px;
 	text-align: center;
 	width: 100%;
-    margin-top: 2rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 1rem;
+	background-color: white;
+	border-radius: 15px;
+	border: solid 2px var(--blue);
+	box-shadow: 0 0 30px var(--blue);
 }
 
-.errorMsg {
-	color: var(--white);
-	background-color: var(--red);
-	padding: 1.4rem 3rem;
-	border-radius: 8px;
-	text-align: center;
-	width: 100%;
-	margin-top: 2rem;
+.section-datos > a {
+	color: var(--blue);
 }
 
 .svg-contacto {
-    color: var(--darkblue);
-    font-size: 3rem;
+	color: var(--blue);
+	font-size: 3rem;
+	transition: all 0.2s ease-in-out;
 }
 
-  /* ---------------------------------------------------------------------------------------------------*/
-  
-  /* Estilos para Pantallas Grandes */
-  @media (max-width: 2000px) and (min-width: 1440px) {
-    
-    .main-container-contact {
-        padding: 5rem 0;
-    }
+.svg-contacto:hover {
+	color: var(--lightgreen);
+	transform: scale(1.1);
+}
 
-    .section-contact {
-        width: 50%;
-    }
-    
-    .title {
-        text-align: center;
-        margin-bottom: 5rem;
-    }
-    
-    .form-contact {
-        width: 40%;
-        gap: 0rem;
-    }
-    
-    .form-contact > input, .form-contact > textarea {
-        width: 100%;
-        margin-bottom: 3rem;
-        text-align: left;
-    }
-    
-    
-    .successMsg {
-        padding: 1rem 3rem;
-    }
-    
-    .errorMsg {
-        padding: 1rem 3rem;
-    }
-    
-  }
-  
-  /* ---------------------------------------------------------------------------------------------------*/
-  
-  /* Estilos para Laptops */
-  @media (max-width: 1439px) and (min-width: 1024px) {
-    
-    .main-container-contact {
-        padding: 4rem 0;
-    }
+/* ---------------------------------------------------------------------------------------------------*/
 
-    .section-contact {
-        width: 60%;
-    }
-    
-    .title {
-        text-align: center;
-        margin-bottom: 4rem;
-    }
-    
-    .form-contact {
-        width: 50%;
-        gap: 0rem;
-    }
-    
-    .form-contact > input, .form-contact > textarea {
-        width: 100%;
-        margin-bottom: 3rem;
-        text-align: left;
-    }
-    
-    
-    .successMsg {
-        padding: 1rem 1.5rem;
-    }
-    
-    .errorMsg {
-        padding: 1rem 1.5rem;
-    }
-  }
-  
-  /* ---------------------------------------------------------------------------------------------------*/
-  
-  /* Estilos para Tablets */
-  @media (max-width: 1023px) and (min-width: 601px) {
-   
-    .main-container-contact {
-        padding: 3rem 0;
-    }
+/* Estilos para Pantallas Grandes */
+@media (max-width: 2000px) and (min-width: 1440px) {
+	.main-container-contact {
+		gap: 3rem;
+		padding-bottom: 5rem;
+	}
+	
+	.form-container {
+		width: 35%;
+	}
+	
+	.datos-container-contacto {
+		display: flex;
+		flex-direction: column;
+		width: 35%;
+	}
+	
+	.title-logo-div {
+		padding-right: 3rem;
+	}
+	
+	.logo-contacto {
+		width: 10rem;
+	}
+	
+	.section-datos {
+		padding: 4rem 3rem 2.5rem 3rem;
+	}
+}
 
-    .section-contact {
-        width: 70%;
-    }
-    
-    .title {
-        text-align: center;
-        margin-bottom: 4rem;
-    }
-    
-    .form-contact {
-        width: 60%;
-        gap: 0rem;
-    }
-    
-    .form-contact > input, .form-contact > textarea {
-        width: 100%;
-        margin-bottom: 3rem;
-        text-align: left;
-    }
-    
-    
-    .successMsg {
-        padding: 1rem 1.5rem;
-    }
-    
-    .errorMsg {
-        padding: 1rem 1.5rem;
-    }
-  }
-  
-  /* ---------------------------------------------------------------------------------------------------*/
-  
-  /* Estilos para Móviles */
-  @media (max-width: 600px) {
-    
-    .main-container-contact {
-        padding: 3rem 0;
-    }
+/* ---------------------------------------------------------------------------------------------------*/
 
-    .section-contact {
-        width: 100%;
-        padding: 0 1rem;
-    }
-    
-    .title {
-        text-align: center;
-        margin-bottom: 2rem;
-    }
-    
-    .form-contact {
-        width: 95%;
-        gap: 1rem;
-    }
-    
-    .form-contact > input, .form-contact > textarea {
-        width: 100%;
-        margin-bottom: 3rem;
-        text-align: left;
-    }
-    
-    
-    .successMsg {
-        padding: 1rem 1.5rem;
-        border-radius: 5px;
-    }
-    
-    .errorMsg {
-        padding: 1rem 1.5rem;
-        border-radius: 5px;
-    }
-  }
+/* Estilos para Laptops */
+@media (max-width: 1439px) and (min-width: 1024px) {
+	.main-container-contact {
+		gap: 3rem;
+		padding-bottom: 5rem;
+	}
+	
+	.form-container {
+		width: 50%;
+	}
+	
+	.datos-container-contacto {
+		display: flex;
+		flex-direction: column;
+		width: 35%;
+	}
+	
+	.title-logo-div {
+		padding-right: 3rem;
+	}
+	
+	.logo-contacto {
+		width: 10rem;
+	}
+	
+	.section-datos {
+		padding: 4rem 3rem 2.5rem 3rem;
+	}
+}
+
+/* ---------------------------------------------------------------------------------------------------*/
+
+/* Estilos para Tablets */
+@media (max-width: 1023px) and (min-width: 601px) {
+	.main-container-contact {
+		gap: 1rem;
+		padding-bottom: 3rem;
+	}
+	
+	.form-container {
+		width: 50%;
+	}
+	
+	.datos-container-contacto {
+		display: flex;
+		flex-direction: column;
+		width: 35%;
+	}
+	
+	.title-logo-div {
+		padding-right: 3rem;
+	}
+	
+	.logo-contacto {
+		width: 7rem;
+	}
+	
+	.section-datos {
+		padding: 4rem 3rem 2.5rem 3rem;
+	}
+}
+
+/* ---------------------------------------------------------------------------------------------------*/
+
+/* Estilos para Móviles */
+@media (max-width: 600px) {
+	.main-container-contact {
+		gap: 1rem;
+		padding-bottom: 2rem;
+		flex-direction: column;
+	}
+	
+	.form-container {
+		width: 95%;
+		margin: 0 auto;
+	}
+	
+	.datos-container-contacto {
+		display: flex;
+		flex-direction: column;
+		width: 95%;
+		margin: 0 auto;
+	}
+	
+	.title-logo-div {
+		padding-right: 3rem;
+	}
+	
+	.logo-contacto {
+		width: 7rem;
+	}
+	
+	.section-datos {
+		padding: 4rem 3rem 2.5rem 3rem;
+	}
+}

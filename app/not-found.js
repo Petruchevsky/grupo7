@@ -1,22 +1,24 @@
-import styles from "./not-found.module.css"
-import Link from "next/link";
-import React from "react";
+import Navbar from "./components/Navbar";
+import { Spinner } from 'react-bootstrap';
+import Image from "next/image";
 
-export default function NotFound() {
+function NotFound() {
 	return (
-		<div className={styles.container}>
-			<Link
-				href="/"
-				className={styles.boton}
-			>Volver al Inicio</Link>
-			<img
-				src="/img/not-found-page.jpg"
-				alt="imagen de pagina no encontrada"
-			/>
-		</div>
-	);
+    <main className="not-found-container">
+		<section className="central-section-404">
+      <h1 className="h1-error-404">Error 404 <Spinner animation="grow" speed={1000} className="spinner-404"/></h1>
+      <h1 className="h1-text">La página solicitada no existe</h1>
+      <Image
+        src="/img/logo-blanco.jpg"
+        alt="Error 404"
+        width={300}
+        height={300}
+          className="img-404"
+      />
+    </section>
+    <Navbar />
+	</main>
+  )
 }
 
-export async function getServerSideProps() {
-	return { notFound: true };
- }
+export default NotFound;

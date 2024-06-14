@@ -1,10 +1,12 @@
 import Slider from "./components/Slider";
-import Header from "./components/Header";
+import dynamic from "next/dynamic";
+const Header = dynamic(()=> import("./components/Header"), {ssr: false});
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ProductosDestacados from "./components/ProductosDestacados";
 import Image from "next/image";
 import "./page.css";
+
 
 export const metadata = {
 	title: "Inicio",
@@ -16,20 +18,19 @@ function Home() {
 		<main>
 			<Header />
 			<Navbar />
-			<section className="main-container-y">
+			<section className="flex-container-y">
 				<Slider />
 			</section>
-			<hr className="w-75 m-auto" />
 			<section>
 				<ProductosDestacados />
 			</section>
-			<hr className="w-75 m-auto" />
 			<div className="home-banner">
 				<Image
 					src="/img/bannerG7.png"
-					width={1700}
+					width={1600}
 					height={400}
 					alt="Banner G7"
+					className="banner-img"
 				/>
 			</div>
 			<Footer />

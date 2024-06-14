@@ -8,10 +8,10 @@ export const metadata = {
 	description: "Somos una gran empreza familiar en plena expansión!",
 };
 
-export const getNosotros = async () => {
+const getNosotros = async () => {
 	try {
 		const response = await fetch(
-			`${process.env.NEXT_PUBLIC_APIURL}/api/nosotro?populate=*`,
+			`${process.env.NEXT_PUBLIC_NEXT_APIURL}/api/nosotros`,
 			{ cache: "no-store" }
 		);
 		if (response.ok) {
@@ -32,8 +32,8 @@ export const getNosotros = async () => {
 async function Nosotros() {
 
 	const data = await getNosotros();
-	const descripcion = data?.attributes?.descripcion;
-	const imagenes = data?.attributes?.imagen?.data;
+	const descripcion = data?.description;
+	const imagenes = data?.images
 
 
 	return (

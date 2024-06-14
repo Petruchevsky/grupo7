@@ -8,13 +8,34 @@ export const metadata = {
 	description: "Productos 100% Biodegradables",
 };
 
+const getProductos = async() => {
+	try {
+		const res = await fetch(
+			`${process.env.NEXT_PUBLIC_NEXT_APIURL}/api/productos`,
+			{ cache: "no-store" }
+		);
+
+		if (!res.ok) {
+			errorHandler(res.status);
+			setRedToast(res.statusText);
+			throw new Error(res.statusText);
+		}
+
+		const { data } = await res.json();
+		return data;
+	} catch (error) {
+		console.error(error);
+	}
+}
+
 async function Tienda() {
+	const data = await getProductos();
 
 	return (
 		<div>
 			<Header />
 			<Navbar />
-			<TiendaComp />
+			<TiendaComp data={data}/>
 			<Footer />
 		</div>
 	);

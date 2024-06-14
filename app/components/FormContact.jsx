@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import "./FormContact.css";
 import { LiaTelegramPlane } from "react-icons/lia";
-import { Slide, Zoom, Bounce } from "react-awesome-reveal";
+import { Slide, Bounce } from "react-awesome-reveal";
 import { BsFillTelephoneInboundFill } from "react-icons/bs";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { IoMdMailUnread } from "react-icons/io";
@@ -15,15 +15,16 @@ function FormContact() {
 	const [email, setEmail] = useState("");
 	const [subject, setSubject] = useState("");
 	const [message, setMessage] = useState("");
-	const [errorMsg, setErrorMsg] = useState(null);
-	const [successMsg, setSuccessMsg] = useState(null);
+	const [errorMsg, setErrorMsg] = useState("");
+	const [successMsg, setSuccessMsg] = useState("");
 
 	const handleSubmit = async (e) => {
-		e.preventDefault();
-		setErrorMsg(null);
-		setSuccessMsg(null);
+		setSuccessMsg("Estamos enviando tu mensaje...");
 
-		const data = { name, email, subject, message }; // Definir data
+		e.preventDefault();
+		setErrorMsg("");
+
+		const data = { name, email, subject, message };
 
 		try {
 			const res = await fetch("/api/mailer", {
@@ -46,7 +47,7 @@ function FormContact() {
 				setSubject("");
 				setMessage("");
 				setSuccessMsg("Te responderemos lo antes posible!");
-			}, 4000);
+			}, 2000);
 		} catch (error) {
 			setErrorMsg(error.message);
 
@@ -56,16 +57,13 @@ function FormContact() {
 				setSubject("");
 				setMessage("");
 				setErrorMsg("Por favor refresca la página, e inténtalo de nuevo...");
-			}, 4000);
+			}, 2000);
 		}
 	};
 
 	return (
 		<main className="main-container-contact">
-			<setcion className="section-contact">
-				<Zoom>
-					<h1 className="title">Contacto</h1>
-				</Zoom>
+			<setcion className="form-container">
 				<form onSubmit={handleSubmit}>
 					<Slide className="w-100 text-l">
 						{" "}
@@ -114,44 +112,52 @@ function FormContact() {
 						</button>
 					</Slide>
 
-					{successMsg && <p className="successMsg">{successMsg}</p>}
-					{errorMsg && <p className="errorMsg">{errorMsg}</p>}
+					{successMsg && <p className="success">{successMsg}</p>}
+					{errorMsg && <p className="error">{errorMsg}</p>}
 				</form>
 			</setcion>
 
-			
-                <div className="datos-container-contacto">
-                            
-                                 <Image src="/img/Original.png" width={500} height={500} alt="logo de grupo 7" className="logo-contacto"></Image>
-                            
-                            <Bounce>
-                                 <section className="section-datos">
-                                     <div style={{ display: "flex", gap: "1rem" }}>
-                                         <BsFillTelephoneInboundFill className="svg-contacto" />
-                                         <FaWhatsapp className="svg-contacto" />
-                                     </div>
-                                     <Link
-                                         className="link"
-                                         href="https://wa.me/56937131180?text=Hola!%20Quisiera%20comprar%20un%20producto%20de%20Grupo%207!"
-                                         target="_blank"
-                                     >
-                                         +56 9 3713 1180
-                                     </Link>
-                                     <IoMdMailUnread className="svg-contacto" />
-                                     <Link
-                                         className="link"
-                                         href="mailto:contacto@grupo7.cl?subject=Consulta"
-                                     >
-                                         contacto@grupo7.cl
-                                     </Link>
-                                     <FaMapLocationDot className="svg-contacto" />
-                                     <Link className="link" href="/tienda">
-                                         Distribución en Santiago, Talca y Región de Valparaiso.
-                                     </Link>
-                                 </section>
-                            </Bounce>
-                         </div>
-            
+			<div className="datos-container-contacto">
+				<div className="title-logo-div">
+					<Bounce>
+						<Image
+							src="/img/Original.png"
+							width={500}
+							height={500}
+							alt="logo de grupo 7"
+							className="logo-contacto"
+						></Image>
+						<h1 className="h1-page">Contacto</h1>
+					</Bounce>
+				</div>
+
+				<Bounce>
+					<section className="section-datos">
+						<div style={{ display: "flex", gap: "1rem" }}>
+							<BsFillTelephoneInboundFill className="svg-contacto" />
+							<FaWhatsapp className="svg-contacto" />
+						</div>
+						<Link
+							className="link"
+							href="https://wa.me/56937131180?text=Hola!%20Quisiera%20comprar%20un%20producto%20de%20Grupo%207!"
+							target="_blank"
+						>
+							+56 9 3713 1180
+						</Link>
+						<IoMdMailUnread className="svg-contacto" />
+						<Link
+							className="link"
+							href="mailto:contacto@grupo7.cl?subject=Consulta"
+						>
+							contacto@grupo7.cl
+						</Link>
+						<FaMapLocationDot className="svg-contacto" />
+						<Link className="link" href="/tienda">
+							Distribución en Santiago, Talca y Región de Valparaíso.
+						</Link>
+					</section>
+				</Bounce>
+			</div>
 		</main>
 	);
 }

@@ -1,27 +1,23 @@
+'use server'
 import SliderComp from "./SliderComp";
 
-async function getSlides() {
+const getData = async () => {
   try {
-    console.log(process.env.NEXT_PUBLIC_APIURL)
-    const response = await fetch(`${process.env.NEXT_PUBLIC_APIURL}/api/slider-photos?populate=*`, { cache: "no-store" })
-
-    if (!response.ok) {
-      const errorData = await response.json();
-      const errorMessage = `Error: ${response.status}: ${errorData.message}`
-      throw new Error(errorMessage)
+    const res = await fetch(`${process.env.NEXT_PUBLIC_NEXT_APIURL}/api/slider`, { cache: "no-store" })
+    if (!res.ok) {
+      throw new Error(res.statusText)
     }
-    const { data } = await response.json();
+
+    const data = await res.json();
     return data;
+
   } catch (error) {
-    console.error(error)
-    
-    return null
+    console.error(error);
   }
 }
 
 async function Slider() {
-  
-  const data = await getSlides();
+  const data = await getData();
 
   return  <SliderComp props={data}/>
   

@@ -1,6 +1,3 @@
-.main-container-PD {
-	padding: 4rem 0;
-}
 
 .PD-container {
 	width: 60%;
@@ -12,19 +9,7 @@
 	justify-content: space-evenly;
 	flex-wrap: wrap;
 	gap: 4rem;
-	padding: 4rem 0rem;
-}
-
-.observacion {
-	font-size: 2rem;
-	color: green;
-	text-align: center;
-	margin-bottom: 2rem;
-	padding: 0 3rem;
-}
-
-.observacion span {
-	font-weight: bold;
+	padding: 4rem 0 10rem 0;
 }
 
 /* TIENDA SIN PRODUCTOS */
@@ -51,18 +36,25 @@
 	background: linear-gradient(to right, lightgray, white);
 }
 
-.Img {
-	width: 40%;
-	border-radius: 10px;
-	box-shadow: 0 0 10px white;
-	height: fit-content;
-	margin: auto 0;
-}
 
-/* Estilos para LapTops */
-@media (min-width: 1024px) and (max-width: 1199px) {
+/* ---------------------------------------------------------------------------------------------------*/
+/* Estilos para Pantallas Grandes */
+@media (max-width: 2000px) and (min-width: 1440px) {
+	.PD-container {
+		width: 70%;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: row;
+		align-content: center;
+		align-items: center;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		gap: 4rem;
+		padding: 3rem 0 7rem 0;
+	}
+	
 	/* TIENDA SIN PRODUCTOS */
-	.container {
+	.PD-container-empty {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-evenly;
@@ -70,36 +62,40 @@
 		background-position: center;
 		background-size: cover;
 		background-attachment: scroll;
-		padding: 5rem;
+		padding: 7rem;
 	}
-
+	
 	.H1 {
 		width: 25%;
 		text-align: center;
 		margin: auto 0;
-		padding: 4rem 4rem;
+		padding: 8rem 1rem;
 		border-radius: 50%;
 		box-shadow: 0 0 10px white;
 		font-weight: bold;
-		font-size: 2rem;
 		color: #4bbdff;
 		background: linear-gradient(to right, lightgray, white);
 	}
 }
 
-/* Estilos para tabletas */
-@media (min-width: 768px) and (max-width: 1023px) {
-	.pageH1 {
-		font-size: 3rem;
+/* ---------------------------------------------------------------------------------------------------*/
+/* Estilos para Laptops */
+@media (max-width: 1439px) and (min-width: 1024px) {
+	.PD-container {
+		width: 90%;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: row;
+		align-content: center;
+		align-items: center;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		gap: 4rem;
+		padding: 3rem 0 5rem 0;
 	}
-
-	.observacion {
-		font-size: 1.6rem;
-		padding: 0 2rem;
-	}
-
+	
 	/* TIENDA SIN PRODUCTOS */
-	.container {
+	.PD-container-empty {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-evenly;
@@ -107,85 +103,87 @@
 		background-position: center;
 		background-size: cover;
 		background-attachment: scroll;
-		padding: 5rem;
+		padding: 7rem;
 	}
-
+	
 	.H1 {
-		width: 30%;
+		width: 25%;
 		text-align: center;
 		margin: auto 0;
-		padding: 5rem 3.5rem;
+		padding: 8rem 1rem;
 		border-radius: 50%;
 		box-shadow: 0 0 10px white;
 		font-weight: bold;
-		font-size: 1.6rem;
 		color: #4bbdff;
 		background: linear-gradient(to right, lightgray, white);
 	}
-
-	.Img {
-		width: 45%;
-		border-radius: 10px;
-		box-shadow: 0 0 10px white;
-		height: fit-content;
-		margin: auto 0;
-	}
 }
 
-/* Estilos para móviles */
-@media (max-width: 767px) {
-	.pageH1 {
-		font-size: 2.5rem;
-	}
-
-	.observacion {
-		font-size: 1.4rem;
-		padding: 0 1rem;
-	}
-
+/* ---------------------------------------------------------------------------------------------------*/
+/* Estilos para Tablets */
+@media (max-width: 1023px) and (min-width: 601px) {
 	.PD-container {
+		width: 70%;
+		margin: 0 auto;
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		align-content: center;
 		align-items: center;
-		margin-bottom: 0;
-		gap: 0;
-		padding: 0 1rem;
-		width: 100%;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		gap: 4rem;
+		padding: 2rem 0 4rem 0;
 	}
-
+	
 	/* TIENDA SIN PRODUCTOS */
-	.container {
+	.PD-container-empty {
 		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-      align-items: center;
-      gap: 2rem;
+		flex-direction: row;
+		justify-content: space-evenly;
 		background-image: url("/img/bubbles-bg.jpg");
 		background-position: center;
 		background-size: cover;
 		background-attachment: scroll;
-		padding: 2rem 1rem;
+		padding: 7rem;
 	}
-
+	
 	.H1 {
-		width: 95%;
+		width: 25%;
 		text-align: center;
 		margin: auto 0;
-		padding: 1rem;
-		border-radius: 10px;
+		padding: 8rem 1rem;
+		border-radius: 50%;
 		box-shadow: 0 0 10px white;
 		font-weight: bold;
-		font-size: 1.6rem;
 		color: #4bbdff;
 		background: linear-gradient(to right, lightgray, white);
 	}
+}
 
-	.Img {
-		width: 95%;
-		border-radius: 10px;
-		box-shadow: 0 0 10px white;
-		height: fit-content;
-		margin: auto 0;
+/* ---------------------------------------------------------------------------------------------------*/
+/* Estilos para Móviles */
+@media (max-width: 600px) {
+	.PD-container {
+		min-width: 100%;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		align-items: center;
+		justify-content: center;
+		gap: 2rem;
+		padding: 2rem 0rem;
+	}
+	
+	/* TIENDA SIN PRODUCTOS */
+	.PD-container-empty {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		background-image: url("/img/bubbles-bg.jpg");
+		background-position: center;
+		background-size: cover;
+		background-attachment: scroll;
+		padding: 7rem;
 	}
 }

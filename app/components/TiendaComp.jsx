@@ -1,38 +1,25 @@
+"use client";
+import { useState } from "react";
 import Producto from "./Producto";
-import "./ProductosDestacados.css"
-import "../page.css"
+import "./ProductosDestacados.css";
+import '@/app/page.css'
 import Image from "next/image";
+import { Slide } from "react-awesome-reveal";
+import { errorHandler } from "../utils/error-handler";
 
-async function getProductos() {
-	try {
-		const response = await fetch(
-			`${process.env.NEXT_PUBLIC_APIURL}/api/productos?populate=imagen`,
-			{ cache: "no-store" }
-		);
 
-		if (!response.ok) {
-			const errorData = await response.json();
-			const errorMessage = `Error: ${response.status}: ${errorData.message}`;
-			throw new Error(errorMessage);
-		}
+function TiendaComp({ data }) {
+	const [redToast, setRedToast] = useState("");
+	const products = data.products;
 
-		const { data } = await response.json();
-		return data;
-	} catch (error) {
-		console.error(error);
-	}
-}
+	{redToast && <p className="error"> {redToast} </p>}
 
-async function TiendaComp() {
-
-	const data = await getProductos();
-
-	if (data.length === 0) {
+	if (data.isEmpty) {
 		return (
 			<div className="PD-container-empty">
-				<h1>
-					Aún no hemos agregado Productos a Nuestra Tienda
-				</h1>
+				<Slide>
+					<h1>Aún no hemos agregado Productos a Nuestra Tienda</h1>
+				</Slide>
 
 				<Image
 					src="/img/tienda-vacia.avif"
@@ -46,30 +33,29 @@ async function TiendaComp() {
 	}
 
 	return (
-		<main className="main-container-y main-container-PD">
-			<h1 className="h1-page">Tienda</h1>
+		<main>
+			<Slide>
+				<h1 className="h1-page">Tienda</h1>
+			</Slide>
 
 			<div className="PD-container">
-				{data &&
-					data.map((producto) => {
+				{products &&
+					products.map((product) => {
 						return (
-							<Producto
-								key={producto.id.toString()}
-								producto={producto.attributes}
-							/>
+							<Producto key={product.id.toString()} product={product} />
 						);
 					})}
 			</div>
 
-            <div className="home-banner">
+			<div className="home-banner">
 				<Image
 					src="/img/bannerG7.png"
-					width={1700}
+					width={1600}
 					height={400}
 					alt="Banner G7"
+					className="banner-img"
 				/>
 			</div>
-			
 		</main>
 	);
 }

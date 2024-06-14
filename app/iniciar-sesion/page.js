@@ -1,5 +1,5 @@
 import React from 'react'
-import IniciarSesionComponente from '../components/iniciar-sesion-componente/IniciarSesionComponente'
+import IniciarSesionComponente from '../components/IniciarSesionComp'
 
 
 export const metadata = {

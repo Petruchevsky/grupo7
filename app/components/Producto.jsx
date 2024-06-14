@@ -1,53 +1,48 @@
-'use client'
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "react-bootstrap";
 import { Zoom } from "react-awesome-reveal";
-import "./Producto.css"
+import "./Producto.css";
 
+const Producto = ({ product }) => {
+	let { title, price, stock, images, slug } = product;
 
-const Producto = ({ producto }) => {
-
-	let imgURL = producto.imagen.data.attributes.url
-
-	let { nombre, precio, stock, url } = producto;
-	precio = precio.toLocaleString("es-CL", {
+	price = price.toLocaleString("es-CL", {
 		style: "currency",
 		currency: "CLP",
-	})
-
+	});
 
 	return (
-
 		<Zoom cascade damping={0.1}>
 			<div className="card-prod">
-						<Image
-							src={imgURL}
-							alt={`Imagen de Producto ${nombre}`}
-							width={300}
-							height={300}
-							className="img-prod"
-						/>
-					
+				<Image
+					src={images[0].url}
+					alt={`Imagen de Producto ${title}`}
+					width={300}
+					height={300}
+					className="img-prod"
+				/>
+
 				<div className="card-prod-text">
-					<Zoom cascade damping={0.2}>
-						<h1>{nombre}</h1>
-						<h2>Precio: {precio}</h2>
-						<p>Disponible: {stock ? "SI" : "NO"}</p>
+						<Zoom>
+							<h1>{title}</h1>
+							<h2>Precio: {price}</h2>
+							<p>Disponible: {stock ? "SI" : "NO"}</p>
+						</Zoom>
 						{stock ? (
-							<Link href={`/tienda/${url}`} className="link-button">
+							<div className="btn-prod-div">
+								<Link href={`/tienda/${slug}`} className="link-button">
 									Ver Producto
-							</Link>
+								</Link>
+							</div>
 						) : (
-							<Button className="link-button" variant="outlined" disabled>
-								Ver Producto
-							</Button>
+							<div className="btn-prod-div">
+								<button className="btn-disabled">Sin Stock</button>
+							</div>
 						)}
-					</Zoom>
 				</div>
 			</div>
 		</Zoom>
-	
 	);
 };
 

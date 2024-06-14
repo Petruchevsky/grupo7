@@ -1,22 +1,20 @@
 import Producto from "./Producto";
 import "./ProductosDestacados.css"
-import Image from "next/image";
 import Link from "next/link";
 
 async function getProductos() {
 	try {
-		const response = await fetch(
-			`${process.env.NEXT_PUBLIC_APIURL}/api/productos?populate=imagen`,
+		const res = await fetch(
+			`${process.env.NEXT_PUBLIC_NEXT_APIURL}/api/productos`,
 			{ cache: "no-store" }
 		);
 
-		if (!response.ok) {
-			const errorData = await response.json();
-			const errorMessage = `Error: ${response.status}: ${errorData.message}`;
-			throw new Error(errorMessage);
+		if (!res.ok) {
+			const errorData = await res.json();
+			throw new Error(errorData.message);
 		}
 
-		const { data } = await response.json();
+		const { data } = await res.json();
 		return data;
 	} catch (error) {
 		console.error(error);
@@ -26,41 +24,34 @@ async function getProductos() {
 async function ProductosDestacados() {
 
 	const data = await getProductos();
+	const products = data.products;
 
-	if (data.length === 0) {
+	if (data.isEmpty) {
 		return (
 			<div className="PD-container-empty">
 				<h1>
 					Aún no hemos agregado Productos a Nuestra Tienda
 				</h1>
-
-				<Image
-					src="/img/tienda-vacia.avif"
-					width={626}
-					height={351}
-					alt="imagen de tienda vacia"
-					className="PD-img"
-				/>
 			</div>
 		);
 	}
 
 	return (
-		<main className="main-container-y main-container-PD">
-			<h1 className="h1-page">Productos Destacados</h1>
+		<main className="main-container-PD">
 
+			<h1 className="h1-page">Productos Destacados</h1>
 			<div className="PD-container">
-				{data &&
-					data.map((producto) => {
+				{products &&
+					products.map((product) => {
 						return (
 							<Producto
-								key={producto.id.toString()}
-								producto={producto.attributes}
+								key={product.id.toString()}
+								product={product}
 							/>
 						);
 					})}
 			</div>
-			<Link href="/tienda" className="link-button m-auto">Ir a la Tienda</Link>
+			<Link href="/tienda" className="link-button m-auto rounded-0">Ir a la Tienda</Link>
 		</main>
 	);
 }

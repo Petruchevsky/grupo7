@@ -1,163 +1,128 @@
+/* ---------------------------------------------------------------------------------------------------*/
+/* Estilos para Pantallas 4K*/
 .post-container {
-	height: 45rem;
+	height: auto;
 	display: flex;
-	flex-direction: row;
-	align-content: center;
 	align-items: center;
-	justify-content: space-around;
-	flex-wrap: wrap;
-	/* margin: 0rem 2rem 2rem 2rem; */
+	justify-content: space-between;
 	border-radius: 10px;
-	box-shadow: 0 0 5px black;
+	box-shadow: 0 0 30px var(--blue);
+	background-color: white;
+	border: none;
 }
 
 .text-post-container {
-	width: 60%;
+	width: 62%;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	justify-content: space-around;
-	padding: 0rem 3rem;
+	justify-content: center;
+	padding: 0 5rem;
 }
 
-.postH1 {
-	font-size: 2.4rem;
-	font-weight: bold;
-	color: #4bbdff;
-	margin: 0;
-}
-
-.postFecha {
-	font-size: 1.6rem;
-	font-weight: bold;
-	color: orangered;
-}
-
-.postP {
-	font-size: 1.6rem;
-	color: gray;
-	text-align: justify;
-	padding: 0;
-	margin: 0;
+.img-div-post {
+	width: 38%;
 }
 
 .img-post {
-	width: 40%;
-	height: 100%;
+	width: 100%;
+	min-height: 500px;
+	height: auto;
 	border-radius: 10px 0 0 10px;
 }
 
-.links {
-	text-decoration: none;
-	font-size: 1.6rem;
-	padding: 0;
-	color: rgb(20, 78, 238);
-	transition: all 300ms;
-}
-
-/* Estilo de hover para los enlaces */
-.links:hover {
-	color: #4bbdff !important;
-	transform: scale(1.1);
-}
-
-/* Estilos para tabletas */
-@media (min-width: 768px) and (max-width: 1023px) {
-	.post-container {
-		height: 24rem;
-	}
-
+/* ---------------------------------------------------------------------------------------------------*/
+/* Estilos para Pantallas Grandes */
+@media (max-width: 2000px) and (min-width: 1440px) {
 	.text-post-container {
-		padding: 1.3rem 2rem;
-		width: 55%;
+		width: 70%;
+		padding: 0rem 3rem;
 	}
-
-	.postH1 {
-		font-size: 1.8rem;
+	
+	.img-div-post {
+		width: 30%;
 	}
+	
+	.img-post {
+		width: 100%;
+		min-height: 350px;
 
-	.postFecha {
-		font-size: 1.2rem;
-	}
-
-	.postP {
-		font-size: 1.4rem;
-	}
-
-	.imgs {
-		border-radius: 10px 0 0 10px;
-		min-height: 100%;
-		width: 45%;
-	}
-
-	.links {
-		text-decoration: none;
-		font-size: 1.2rem;
-		padding: 0;
-		color: rgb(20, 78, 238);
 	}
 }
 
-/* Estilos para móviles */
-@media (max-width: 767px) {
+/* ---------------------------------------------------------------------------------------------------*/
+/* Estilos para Laptops */
+@media (max-width: 1439px) and (min-width: 1024px) {
 	.post-container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin: 0.5rem 1rem 1rem 1rem;
-		height: fit-content !important;
+		height: auto;
+		min-height: 380px;
+	}
+	
+	.text-post-container {
+		width: 60%;
+		padding: 0rem 3rem;
+	}
+	
+	.img-div-post {
+		width: 40%;
+		padding: 0 0 0 3rem;
+	}
+	
+	.img-post {
+		width: 100%;
+		min-height: 310px;
 		border-radius: 10px;
 	}
-	.imgs {
-		width: 100% !important;
-		height: 130%;
-		border-radius: 10px 10px 0 0;
-	}
+}
 
+/* ---------------------------------------------------------------------------------------------------*/
+/* Estilos para Tablets */
+@media (max-width: 1023px) and (min-width: 601px) {
+	.post-container {
+		height: auto;
+		min-height: 350px;
+	}
+	
+	.text-post-container {
+		width: 55%;
+		padding: 0rem 3rem;
+	}
+	
+	.img-div-post {
+		width: 45%;
+		padding: 0 0 0 3rem;
+	}
+	
+	.img-post {
+		width: 100%;
+		min-height: 250px;
+		border-radius: 10px;
+	}
+}
+
+/* ---------------------------------------------------------------------------------------------------*/
+/* Estilos para Móviles */
+@media (max-width: 600px) {
+	.post-container {
+		width: 100%;
+		flex-direction: column;
+		height: auto;
+		min-height: 350px;
+	}
+	
 	.text-post-container {
 		width: 100%;
-		height: 100% !important;
-		display: flex;
-		flex-direction: column;
-		flex-shrink: 2;
-		flex-wrap: wrap;
-		align-items: center;
-		text-align: center;
-		justify-content: flex-start;
-		padding: 1rem 0.5rem 0.2rem;
-		border-radius: 10px;
+		padding: 1.5rem;
 	}
-
-	.littleDiv {
-		display: flex;
-		flex-direction: column;
-		gap: 0;
-		margin: 0;
-	}
-	.postH1 {
-		font-size: 1.8rem;
-	}
-
-	.postFecha {
-		font-size: 1.2rem;
-		font-weight: normal;
-		color: orangered;
-	}
-
-	.postP {
-		font-size: 1.4rem;
-		color: gray;
-		text-align: justify;
-		padding: 0 2rem;
-		margin: 0;
-	}
-
-	.links {
-		text-decoration: none;
-		font-size: 1.4rem;
+	
+	.img-div-post {
+		width: 100%;
 		padding: 0;
-		margin: 0;
-		color: rgb(20, 78, 238);
-		margin-bottom: 1rem;
+	}
+	
+	.img-post {
+		width: 100%;
+		min-height: 250px;
+		border-radius: 10px 10px 0 0;
 	}
 }

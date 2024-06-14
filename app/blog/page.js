@@ -8,20 +8,19 @@ export const metadata = {
 	description: "Mira Nuestros tips de Limpieza",
 };
 
-async function getPosts() {
+async function getTips() {
 	try {
-		const response = await fetch(
-			`${process.env.NEXT_PUBLIC_APIURL}/api/blogs?populate=*`,
+		const res = await fetch(
+			`${process.env.NEXT_PUBLIC_NEXT_APIURL}/api/tips`,
 			{ cache: "no-store" }
 		);
 
-		if (!response.ok) {
-			const errorData = await response.json();
-			const errorMessage = `Error: ${response.status}: ${errorData.message}`;
-			throw new Error(errorMessage);
+		if (!res.ok) {
+			const errorData = await res.json();
+			throw new Error(errorData.message);
 		}
 
-		const { data } = await response.json();
+		const { data } = await res.json();
 		return data;
 	} catch (error) {
 		console.error(error);
@@ -29,7 +28,7 @@ async function getPosts() {
 }
 
 async function Blog() {
-	const data = await getPosts();
+	const data = await getTips();
 
 	return (
 		<div>

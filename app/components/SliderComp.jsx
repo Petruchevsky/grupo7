@@ -5,65 +5,47 @@ import { Bounce } from "react-awesome-reveal";
 import "./SliderComp.css";
 
 function SliderComp({ props }) {
-
-    const  data  = props;
-
-	const videoExtensions = [
-		".mp4",
-		".avi",
-		".webm",
-		".ogg",
-		".mov",
-		".mkv",
-		".flv",
-		".mpeg",
-		".mpg",
-		".m4v",
-		".3gp",
-		".wmv",
-		".svi",
-	];
+	const data = props;
 
 	return (
-		
-			<Bounce>
-				<Carousel className="container carousel-container">
-					{data?.map((item) => {
-						const url = item.attributes.imagen.data.attributes.url;
-						const { id } = item;
-				
-						if (videoExtensions.some((extension) => url.includes(extension))) {
-							return (
-								<Carousel.Item key={id} className="border-c">
-									<video
-										className="w-100 media"
-										src={url}
-										alt="Slide media"
-										width={1421}
-										height={539}
-										autoPlay
-										loop
-										muted
-									/>
-								</Carousel.Item>
-							);
-						} else {
-							return (
-								<Carousel.Item key={id} className="border-c">
-									<Image
-										className="w-100 media"
-										src={url}
-										alt="Slide media"
-										width={1421}
-										height={539}
-									/>
-								</Carousel.Item>
-							);
-						}
-					})}
-				</Carousel>
-			</Bounce>
-		
+		<div className="carousel-container container">
+			<Carousel interval={1000} pause="hover" fade>
+				{data?.map((file) => {
+					const { url, publicId, fileType } = file;
+
+					if (fileType === "video") {
+						return (
+							<Carousel.Item key={publicId} className="border-c">
+								<video
+									className="media-carousel"
+									src={url}
+									alt="Slide media"
+									width={1200}
+									height={700}
+									autoPlay
+									loop
+									muted
+									layout="responsive"
+								/>
+							</Carousel.Item>
+						);
+					} else {
+						return (
+							<Carousel.Item key={publicId} className="border-c">
+								<Image
+									className="media-carousel"
+									src={url}
+									alt="Slide media"
+									width={1200}
+									height={700}
+									layout="responsive"
+								/>
+							</Carousel.Item>
+						);
+					}
+				})}
+			</Carousel>
+		</div>
 	);
 }
 

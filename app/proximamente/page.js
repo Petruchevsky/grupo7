@@ -12,7 +12,7 @@ export const metadata = {
  async function getData() {
 	try {
 		const response = await fetch(
-			`${process.env.NEXT_PUBLIC_APIURL}/api/proximamentes?populate=*`,
+			`${process.env.NEXT_PUBLIC_NEXT_APIURL}/api/proximamente`,
 			{ cache: "no-store" }
 		);
 
@@ -30,8 +30,8 @@ export const metadata = {
 }
 
 async function Proximamente() {
-
   const data = await getData();
+	console.log(data)
 
   return (
     <div>

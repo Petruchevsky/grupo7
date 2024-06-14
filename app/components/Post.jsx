@@ -1,56 +1,51 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import ReactMarkdown from "react-markdown";
-import "./Post.css"
+import Image from "next/image";
+import Link from "next/link";
+import "./Post.css";
 
-function Post({ post }) {
-  
-  const { titulo, contenido, imagen, url, createdAt } = post;
-  const date = new Date(createdAt);
-  
-  const options = {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-  };
-  const formattedDate = date.toLocaleDateString('es-ES', options) + ' hrs.'
+function Post({ tip }) {
+	const { title, description, images, slug, createdAt, createdBy } = tip;
+	const date = new Date(createdAt);
 
+	const options = {
+		year: "numeric",
+		month: "long",
+		day: "numeric",
+		hour: "2-digit",
+		minute: "2-digit",
+	};
+	const formattedDate = date.toLocaleDateString("es-ES", options) + " hrs.";
 
-  return (
-   
-      
-        <article className="post-container">
-        
-                <Image
-                  quality={100}
-                  src={imagen.data.attributes.url}
-                  alt={`Imagen de Producto ${titulo}`}
-                  width={900}
-                  height={900}
-                  className="img-post"
-                />
-        
-            <div className="text-post-container">
-            
-                <div>
-                  <h1>{titulo}</h1>
-                  <p>{formattedDate}</p>
-                </div>
-        
-                <div className="contenido-div">
-                  <ReactMarkdown>{`${contenido.slice(0, 256)}...`}</ReactMarkdown>
-                  <Link href={`/blog/${url}`} className="link">Leer más...</Link>
-                </div>
-        
-            </div>
-            
-        </article>
-     
+	return (
+		<article className="post-container">
+			<div className="img-div-post">
+				<Image
+					quality={100}
+					src={images[0].url}
+					alt={`Imagen de ${title}`}
+					width={900}
+					height={900}
+					className="img-post"
+				/>
+			</div>
 
-   
-  )
+			<div className="text-post-container">
+				<div>
+					<h1>{title}</h1>
+					<p>Post creado por {createdBy}</p>
+					<p>{formattedDate}</p>
+				</div>
+
+				<div className="contenido-div">
+					<div>
+						<pre className="pre">{`${description.slice(0, 150)}...`}</pre>
+					</div>
+					<Link href={`/blog/${slug}`} className="link">
+						Leer más...
+					</Link>
+				</div>
+			</div>
+		</article>
+	);
 }
 
-export default Post
+export default Post;
