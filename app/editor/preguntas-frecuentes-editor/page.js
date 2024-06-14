@@ -26,7 +26,7 @@ function FaqsEditor() {
 
 	// CHECK IF USER IS ADMIN OR JUST LOGGED USER____________________________________
 	const sessionType = async () => {
-		const res = await fetch("/api/auth/check-admin-auth");
+		const res = await fetch(`${process.env.NEXT_PUBLIC_NEXT_APIURL}/api/auth/check-admin-auth`);
 
 		if (!res.ok) {
 			router.push("/acceso-denegado");
