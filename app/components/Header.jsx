@@ -52,7 +52,7 @@ function Header() {
 					<Zoom className="w-100">
 						<h3 className="grupo7">Grupo 7</h3>
 						<h3 className="slogan">
-							"Diseñando productos para que tu vida sea más fácil"
+							Diseñando productos para que tu vida sea más fácil
 						</h3>
 					</Zoom>
 				</div>
