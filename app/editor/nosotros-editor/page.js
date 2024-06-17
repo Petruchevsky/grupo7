@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState } from "react";
 import Footer from "@/app/components/Footer";
 import React from "react";
 import { FaSave } from "react-icons/fa";
@@ -9,7 +10,6 @@ import { BiError } from "react-icons/bi";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
 import { Fade, Zoom } from "react-awesome-reveal";
 import { Spinner } from "react-bootstrap";
 import { errorHandler } from "@/app/utils/error-handler";
@@ -42,7 +42,9 @@ function NosotrosEditor() {
 			router.push("/acceso-denegado");
 		}
 	};
-	sessionType();
+		useEffect(()=>{
+		sessionType();
+	} ,[]);
 
 	// GET_________________________________________________________________________
 	useEffect(() => {

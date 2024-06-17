@@ -39,7 +39,9 @@ function TipsEditor() {
 			router.push("/acceso-denegado");
 		}
 	};
-	sessionType();
+	useEffect(()=>{
+		sessionType();
+	} ,[]);
 
 	// GET_________________________________________________________________________
 	useEffect(() => {

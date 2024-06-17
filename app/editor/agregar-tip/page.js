@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import "./agregar-tip.css";
 import Link from "next/link";
@@ -35,7 +35,9 @@ function AgregarTip() {
 			router.push("/acceso-denegado");
 		}
 	};
-	sessionType();
+	useEffect(()=>{
+		sessionType();
+	} ,[]);
 
 	// CREATING SLUG FROM TITLE_______________________________________________________
 	const handleTitleChange = (event) => {

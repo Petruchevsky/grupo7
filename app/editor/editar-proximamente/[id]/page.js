@@ -40,7 +40,9 @@ function EditarProximamente({ params }) {
 			router.push("/acceso-denegado");
 		}
 	};
-	sessionType();
+	useEffect(()=>{
+		sessionType();
+	} ,[]);
 
 	// FETCH DATA____________________________________________________________________
 	const fetchData = async () => {

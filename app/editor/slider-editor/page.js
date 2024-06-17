@@ -44,7 +44,9 @@ function SliderEditor() {
 			router.push("/acceso-denegado");
 		}
 	};
-	sessionType();
+	useEffect(()=>{
+		sessionType();
+	} ,[]);
 
 	//FETCH-DATA___________________________________________________________________
 	const fetchData = async () => {

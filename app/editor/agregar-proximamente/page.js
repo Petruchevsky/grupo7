@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -33,7 +33,9 @@ function AgregarProximamente() {
 			router.push("/acceso-denegado");
 		}
 	};
-	sessionType();
+	useEffect(()=>{
+		sessionType();
+	} ,[]);
 
 	// HANDLE SUBMIT_________________________________________________________________
 	const handleSubmit = async (event) => {

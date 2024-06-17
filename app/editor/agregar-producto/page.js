@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import "./agregar-producto.css";
 import Link from "next/link";
@@ -35,7 +35,9 @@ function AgregarProducto() {
 			router.push("/acceso-denegado");
 		}
 	};
-	sessionType();
+	useEffect(()=>{
+		sessionType();
+	} ,[]);
 
 	// CREATING SLUG FROM TITLE_______________________________________________________
 	const handleTitleChange = (event) => {
