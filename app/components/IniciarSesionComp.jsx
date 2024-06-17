@@ -170,8 +170,8 @@ function IniciarSesionComponente() {
 
 					<Slide className="w-100 text-center mb-4" direction="right">
 						<Link
-							onClick={forgotPassword}
-							href="/olvide-mi-password"
+							// onClick={forgotPassword}
+							href="/"
 							className="link"
 						>
 							¿Olvidaste tu Contraseña?
