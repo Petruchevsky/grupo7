@@ -1,5 +1,6 @@
 "use client";
 import { React, useEffect, useState, useRef } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { Spinner } from "react-bootstrap";
@@ -24,6 +25,7 @@ function EditarProximamente({ params }) {
 	const [greenToastSpinner, setGreenToastSpinner] = useState("");
 	const [redToast, setRedToast] = useState("");
 	const [redToastSpinner, setRedToastSpinner] = useState("");
+	const router = useRouter();
 	const inputFileRef = useRef();
 
 	useEffect(() => {

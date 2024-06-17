@@ -1,7 +1,7 @@
 "use client";
 import { React, useEffect, useState } from "react";
-import { errorHandler } from "@/app/utils/error-handler";
 import { useRouter } from "next/navigation";
+import { errorHandler } from "@/app/utils/error-handler";
 import Link from "next/link";
 import Image from "next/image";
 import { FaRegQuestionCircle } from "react-icons/fa";

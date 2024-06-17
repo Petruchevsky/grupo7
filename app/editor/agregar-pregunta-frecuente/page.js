@@ -7,11 +7,10 @@ import { useRouter } from "next/navigation";
 import { FaRegQuestionCircle, FaSave } from "react-icons/fa";
 import { GrStatusGood } from "react-icons/gr";
 import { BiError } from "react-icons/bi";
-import { IoMdAddCircleOutline } from "react-icons/io";
-import { Fade, Zoom } from "react-awesome-reveal";
+import { Zoom } from "react-awesome-reveal";
 import { Spinner } from "react-bootstrap";
 import Footer from "../../components/Footer";
-import { MdMode, MdModeEdit } from "react-icons/md";
+import { MdModeEdit } from "react-icons/md";
 
 function AgregarPreguntaFrecuente() {
 	const [question, setQuestion] = useState("");

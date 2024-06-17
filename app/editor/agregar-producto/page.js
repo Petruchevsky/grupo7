@@ -1,5 +1,6 @@
 "use client";
 import { useState, useRef } from "react";
+import { useRouter } from "next/navigation";
 import "./agregar-producto.css";
 import Link from "next/link";
 import Image from "next/image";
@@ -22,6 +23,7 @@ function AgregarProducto() {
 	const [greenToastSpinner, setGreenToastSpinner] = useState("");
 	const [redToast, setRedToast] = useState("");
 	const [redToastSpinner, setRedToastSpinner] = useState("");
+	const router = useRouter();
 	const inputFileRef = useRef();
 	const checkboxRef = useRef();
 

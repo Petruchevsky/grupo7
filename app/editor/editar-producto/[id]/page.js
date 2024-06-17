@@ -1,5 +1,6 @@
 "use client";
 import { React, useRef, useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import "./editar-producto.css";
 import Link from "next/link";
 import Image from "next/image";
@@ -24,6 +25,7 @@ function EditarProducto({ params }) {
 	const [greenToastSpinner, setGreenToastSpinner] = useState("");
 	const [redToast, setRedToast] = useState("");
 	const [redToastSpinner, setRedToastSpinner] = useState("");
+	const router = useRouter();
 	const checkboxRef = useRef();
 	const inputFileRef = useRef();
 

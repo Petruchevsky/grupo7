@@ -1,5 +1,6 @@
 "use client";
 import { useState, useRef } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { Spinner } from "react-bootstrap";
@@ -21,6 +22,7 @@ function AgregarProximamente() {
 	const [greenToastSpinner, setGreenToastSpinner] = useState("");
 	const [redToast, setRedToast] = useState("");
 	const [redToastSpinner, setRedToastSpinner] = useState("");
+	const router = useRouter();
 	const inputFileRef = useRef();
 
 	// CHECK IF USER IS ADMIN OR JUST LOGGED USER____________________________________

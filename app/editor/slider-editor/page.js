@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { React, useEffect, useState, useRef } from "react";
+import { useRouter } from "next/navigation";
 import { errorHandler } from "@/app/utils/error-handler";
 import { FaSave } from "react-icons/fa";
 import { MdHome } from "react-icons/md";
@@ -14,6 +15,7 @@ import { Fade, Zoom, Bounce } from "react-awesome-reveal";
 import Footer from "@/app/components/Footer";
 
 function SliderEditor() {
+	const [edit, setEdit] = useState(false);
 	const [files, setFiles] = useState([]);
 	const [oldID, setOldID] = useState(null);
 	const [oldPublicId, setOldPublicId] = useState(null);
@@ -22,9 +24,9 @@ function SliderEditor() {
 	const [PostgreRes, setPostgreRes] = useState([]);
 	const [toast, setToast] = useState("");
 	const [toastSpinner, setToastSpinner] = useState(null);
+	const router = useRouter();
 	const inputFileUpload = useRef();
 	const inputFileEdit = useRef();
-	const [edit, setEdit] = useState(false);
 
 	// GET___________________________________________________________________
 	useEffect(() => {
@@ -32,11 +34,25 @@ function SliderEditor() {
 		setEdit(false);
 	}, []);
 
+	// CHECK IF USER IS ADMIN OR JUST LOGGED USER____________________________________
+	const sessionType = async () => {
+		const res = await fetch(
+			`${process.env.NEXT_PUBLIC_NEXT_APIURL}/api/auth/check-admin-auth`
+		);
+
+		if (!res.ok) {
+			router.push("/acceso-denegado");
+		}
+	};
+	sessionType();
+
 	//FETCH-DATA___________________________________________________________________
 	const fetchData = async () => {
 		try {
 			setToast("Cargando archivos del slider");
-			setToastSpinner(<Spinner animation="grow" className="spinner-grow-size" />);
+			setToastSpinner(
+				<Spinner animation="grow" className="spinner-grow-size" />
+			);
 			const res = await fetch("/api/slider", { cache: "no-store" });
 			if (!res.ok) {
 				errorHandler(res.status);
@@ -70,7 +86,9 @@ function SliderEditor() {
 		try {
 			setEdit(true);
 			setToast("Eliminando imagen");
-			setToastSpinner(<Spinner animation="grow" className="spinner-grow-size"/>);
+			setToastSpinner(
+				<Spinner animation="grow" className="spinner-grow-size" />
+			);
 			const res = await fetch(`/api/slider`, {
 				method: "DELETE",
 				headers: {
@@ -144,7 +162,9 @@ function SliderEditor() {
 			try {
 				setEdit(true);
 				setToast("Subiendo archivos");
-				setToastSpinner(<Spinner animation="grow" className="spinner-grow-size"/>);
+				setToastSpinner(
+					<Spinner animation="grow" className="spinner-grow-size" />
+				);
 				const res = await fetch("/api/slider", {
 					method: "POST",
 					body: formData,
@@ -210,7 +230,9 @@ function SliderEditor() {
 			try {
 				setEdit(true);
 				setToast("Reemplazando archivo");
-				setToastSpinner(<Spinner animation="grow" className="spinner-grow-size" />);
+				setToastSpinner(
+					<Spinner animation="grow" className="spinner-grow-size" />
+				);
 				const res = await fetch("/api/slider", {
 					method: "PUT",
 					body: formData,

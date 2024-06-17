@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import "./tips-editor.css";
 import Footer from "@/app/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
 import { Fade, Zoom, Bounce, Slide } from "react-awesome-reveal";
 import { errorHandler } from "@/app/utils/error-handler";
 import { GrStatusGood } from "react-icons/gr";
@@ -26,10 +26,10 @@ function TipsEditor() {
 	const [redToastSpinner, setRedToastSpinner] = useState("");
 	const [greenToast, setGreenToast] = useState("");
 	const [greenToastSpinner, setGreenToastSpinner] = useState("");
-	const inputFileUpload = React.useRef();
-	const inputFileEdit = React.useRef();
 	const [enabledButton, setEnabledButton] = useState(false);
 	const router = useRouter();
+	const inputFileUpload = React.useRef();
+	const inputFileEdit = React.useRef();
 
 	// CHECK IF USER IS ADMIN OR JUST LOGGED USER____________________________________
 	const sessionType = async () => {
