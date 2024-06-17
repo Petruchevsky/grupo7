@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./agregar-pregunta-frecuente.css";
 import Link from "next/link";
 import Image from "next/image";
@@ -29,7 +29,11 @@ function AgregarPreguntaFrecuente() {
 			router.push("/acceso-denegado");
 		}
 	};
-	sessionType();
+
+	useEffect(()=>{
+		sessionType();
+	} ,[]);
+	
 
 	// HANDLE SUBMIT_________________________________________________________________
 	const handleSubmit = async (event) => {
