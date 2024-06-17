@@ -58,7 +58,7 @@ function TiendaEditor() {
 			setGreenToastSpinner(
 				<Spinner animation="grow" className="spinner-grow-size" />
 			);
-			const res = await fetch("/api/productos", { cache: "no-store" });
+			const res = await fetch("/api/productos");
 
 			if (!res.ok) {
 				setGreenToast("");

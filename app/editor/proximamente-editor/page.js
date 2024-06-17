@@ -57,7 +57,7 @@ function ProximamenteEditor() {
 			setGreenToastSpinner(
 				<Spinner animation="grow" className="spinner-grow-size" />
 			);
-			const res = await fetch("/api/proximamente", { cache: "no-store" });
+			const res = await fetch("/api/proximamente");
 
 			if (!res.ok) {
 				setGreenToast("");

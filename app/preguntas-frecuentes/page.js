@@ -12,8 +12,7 @@ export const metadata = {
 const getData = async() => {
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_NEXT_APIURL}/api/preguntas-frecuentes`,
-      { cache: "no-store" }
+      `${process.env.NEXT_PUBLIC_NEXT_APIURL}/api/preguntas-frecuentes`
     );
 
     if (!res.ok) {

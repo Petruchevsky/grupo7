@@ -1,7 +1,6 @@
 "use client";
 import Carousel from "react-bootstrap/Carousel";
 import Image from "next/image";
-import { Bounce } from "react-awesome-reveal";
 import "./SliderComp.css";
 
 function SliderComp({ props }) {

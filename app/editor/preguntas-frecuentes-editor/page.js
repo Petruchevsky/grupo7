@@ -51,7 +51,7 @@ function FaqsEditor() {
 			setGreenToastSpinner(
 				<Spinner animation="grow" className="spinner-grow-size" />
 			);
-			const res = await fetch("/api/preguntas-frecuentes", { cache: "no-store" });
+			const res = await fetch("/api/preguntas-frecuentes");
 
 			if (!res.ok) {
 				const errorData = await res.json();

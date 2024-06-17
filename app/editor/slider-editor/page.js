@@ -55,7 +55,7 @@ function SliderEditor() {
 			setToastSpinner(
 				<Spinner animation="grow" className="spinner-grow-size" />
 			);
-			const res = await fetch("/api/slider", { cache: "no-store" });
+			const res = await fetch("/api/slider");
 			if (!res.ok) {
 				errorHandler(res.status);
 				setToast("Error al cargar los archivos, por favor reinicia la página");

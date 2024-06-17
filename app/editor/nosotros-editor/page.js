@@ -59,7 +59,7 @@ function NosotrosEditor() {
 			setRedToastSpinner("");
 			setGreenToast("Cargando imágenes y textos...");
 			setGreenToastSpinner(<Spinner animation="grow" className="spinner-grow-size" />);
-			const res = await fetch("/api/nosotros", { cache: "no-store" });
+			const res = await fetch("/api/nosotros");
 			if (!res.ok) {
 				setGreenToast("");
 				setGreenToastSpinner("");
