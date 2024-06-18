@@ -10,8 +10,7 @@ export const metadata = {
 
 async function getTips() {
 	try {
-		// const res = await fetch(`${process.env.NEXT_PUBLIC_NEXT_APIURL}/api/tips`);
-		const res = await fetch(`/api/tips`);
+		const res = await fetch(`${process.env.NEXT_PUBLIC_NEXT_APIURL}/api/tips`);
 
 		if (!res.ok) {
 			const errorData = await res.json();
