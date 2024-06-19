@@ -2,11 +2,8 @@
 
 const nextConfig = {
    images: {
-      domains: ["res.cloudinary.com"]
-   },
-   env: {
-      customKey: 'my-value',
-    },
+       domains: ['res.cloudinary.com']
+   }
 }
 
 module.exports = nextConfig

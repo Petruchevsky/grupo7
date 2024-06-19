@@ -39,7 +39,7 @@ function EditarFaq({ params }) {
 	};
 	useEffect(()=>{
 		sessionType();
-	} ,[]);
+	}, []);
 
   // FETCH DATA____________________________________________________________________
   const fetchData = async() => {
